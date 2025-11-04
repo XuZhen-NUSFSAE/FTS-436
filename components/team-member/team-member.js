@@ -31,8 +31,8 @@ class TeamMember extends HTMLElement {
       }
 
       img {
-        width: 100px;
-        height: 100px;
+        width: 144px;
+        height: 202px;
         border-radius: 50%;
         display: block;
         margin: auto;
