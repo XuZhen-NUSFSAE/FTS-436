@@ -210,9 +210,10 @@
       <div id="sub-section-2-header-1">
         <h3>2.1. Front Outboard</h3>
         <p>
-          R25e’s front outboard design was unable to achieve a higher percentage of Ackermann steering, which has always 
-          been identified as a design goal as it has the potential to provide greater cornering performance for the type 
-          of tracks our cars must negotiate. This is mainly due to packaging constraints of the steering linkage.
+          R25e’s front outboard design was unable to achieve a higher percentage of Ackermann steering [appendix?], 
+          which has always been identified as a design goal as it has the potential to provide greater cornering 
+          performance for the type of tracks our cars must negotiate. This is mainly due to packaging constraints of 
+          the steering linkage.
         </p>
 
 
@@ -228,13 +229,11 @@
       <div id="sub-section-2-header-3">
         <h3>2.3. Brakes</h3>
         <p>
-          R25e’s regen capabilities are not maximized, as the braking system had no means of actuating only the front 
-          brakes. The loading of the brake pedal was also suboptimal due to the use of extreme brake bias settings.
+          R25e’s regen [appendix?] capabilities are not maximized, as the braking system had no means of actuating only 
+          the front brakes. The loading of the brake pedal was also suboptimal due to the use of extreme brake bias 
+          settings.
         </p>
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
+        
       </div>
     </div>
 
@@ -265,10 +264,12 @@
 
       <div id="sub-section-4-header-1">
         <h3>4.1. Morphological Chart</h3>
-        <p>Various design and component choices were experimented with, each with their unique traits. 3 Concepts were 
-          generated. Concept 1 serves as the benchmark and is representative of R25e. Concept 2 is the set of designs that 
-          were chosen for R26e. Concept 3 is a collection of experimental designs that ultimately failed to satisfy the 
-          selection criterion. 
+        <image-component tag="image" source="assets/morphchartwconcepts.png"
+          subtitle="Image ?: Morphological chart"></image-component>
+        <p>Various design and component choices were experimented with, each with their unique traits [appendix?]. 3 
+          Concepts were generated. Concept 1 serves as the benchmark and is representative of R25e. Concept 2 is the 
+          set of designs that were chosen for R26e. Concept 3 is a collection of experimental designs that ultimately 
+          failed to satisfy the selection criterion. 
         </p>
 
       <div id="sub-section-4-header-2">
@@ -293,13 +294,15 @@
           clevis is located on the front of the upright for a few reasons, and even though the morphological chart 
           includes 4 variations of packaging, 2 are inferior based on the mounting location of the brake calliper.
         </p>
+        <image-component tag="image" source="assets/brakeforces.png"
+          subtitle="Image ?: Forces during braking"></image-component>
         <p>This is because during a braking event, the ground will exert a force on the front tyres both in the normal 
           direction (due to weight and load transfer) and longitudinal direction (due to friction). The resultant force 
           points upwards and towards the rear of the car. If the brake calliper is placed on the lower trailing side of 
           the upright, it will produce a force that partially cancels the force exerted by the ground, leading to lower 
           loads on the hub and hub bearings. This will lead to lighter hub designs and longer lasting bearings. 
           Conversely, placing the calliper on the leading side of the upright will add to the force exerted by the 
-          ground, causing higher loads.
+          ground, causing higher loads. [appendix?]
         </p>
         <p>Of the other 2 possibilities, steering actuation from the front was used because it better aligned with the 
           steering rack and allows for easier packaging. The drawback is that higher Ackermann percentage cannot be 
@@ -316,7 +319,7 @@
         <p>As a result, R25e’s Ackermann percentage drops to below 80% as the steering angle reaches maximum, requiring 
           1.5° of static toe out to compensate (which has its own implications).
         </p>
-        <p>The solution is then to move steering actuation to the rear and integrate the mounting of the steering clevis 
+        <p>On R26e, steering actuation is moved to the rear and the mounting of the steering clevis is integrated
           with that of the brake callipers. This was made possible also by a 30mm wheelbase increase, which better 
           aligns the steering rack. Actuating steering from the rear allows for more freedom in linkage placement, and 
           R26e manages to maintain its Ackerman percentage above 90 for the entire range of steering.
@@ -334,6 +337,8 @@
           designed to accommodate all of the components. FEA was employed to analyse the strength of the components, 
           which will be explained in a later segment.
         </p>
+        <image-component tag="image" source="assets/steeringclevismounting.png"
+          subtitle="Image ?: Tight packaging of front outboard on R26e"></image-component>
         <p>The steering clevis is secured to the upright using X2 bolts and blind threaded holes, as opposed to bolts 
           and locknuts with through holes. The upright was designed with machining in mind, therefore the profile of 
           the upright as well as any lightening cuts are aligned with the principal axes as much as possible.
@@ -386,13 +391,13 @@
       <div id="sub-section-5-header-3">
         <h3>5.3. Brakes and Regen</h3>
         <p>R25e marks the first time that regen became effective. The regen logic works as such:
-          <p style="margin-left: 50px;">  
+          <p style="margin-left: 50px; margin-right: 50px;">  
           1. Determine the ideal brake balance at various speeds.
           </p>
-          <p style="margin-left: 50px;">
+          <p style="margin-left: 50px; margin-right: 50px">
           2. Bias the brakes to the front, which results in a shortfall in rear brakes line pressure.
           </p>
-          <p style="margin-left: 50px;">
+          <p style="margin-left: 50px; margin-right: 50px">
           3. Compute the amount of regen required to match that ideal brake bias at that given speed and send 
           negative torque command to motor.
           </p>
@@ -431,10 +436,14 @@
         between development time and weight savings. Load cases are computed using excel based on physical properties 
         of the car, and the breakdown of the optimization & analysis results is as follows:
       </p>
+
+      <image-component tag="image" source="assets/r25ackermann.png"
+          subtitle="Image ?: FEA optimization outcome"></image-component>
+      
       <p>It needs to be mentioned that the purpose of the simulation is to study the behaviour of the components under 
         worst case conditions, i.e. with no fastener tension or friction. Tyres are also taken to be operating outside 
         of the G-G diagram as we have no way of extrapolating the actual operating limits of the car and applying a 
-        realistic load case.
+        realistic load case [appendix?].
       </p>
       <p>The weight calculation at this point is based on mass in Solidworks and product specifications. This will be 
         checked again during assembly phase. Some of the components fall below the target FOS of 2.0, but this is due to 
@@ -465,7 +474,7 @@
 
       <div id="sub-section-7-header-1">
         <h3>7.1. Value Proposition</h3>
-        <p>The new changes bring about higher sustained Ackermann steering percentage, lighter overall weight and 
+        <p>The new changes bring about higher sustained Ackermann steering percentage, weight reduction of 0.6kg and 
         improved regen head room, satisfying the goal of designing lightweight components that support the desired 
         geometry. It is hoped that we would be able to verify the effects of higher Ackermann, and that the shutoff 
         valve works reliably.

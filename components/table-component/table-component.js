@@ -1,11 +1,9 @@
 new gridjs.Grid({
-  columns: ["Name", "Email", "Phone Number"],
+  columns: ["Component", "Weight R25e", "Weight R26e", "Weight difference", "FOS"],
   data: [
-    ["John", "john@example.com", "(353) 01 222 3333"],
-    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"],
+    ["Front uprights (x2)", "688.3", "646.64", "-41.66", "2"],
+    ["Front hubs (x2)", "722.2", "683.52", "-38.68", "2"],
+    ["Front hub bearings (x4)", "436", "436", "0", "NA"],
   ],
 }).render(document.getElementById("table-1"));
 
