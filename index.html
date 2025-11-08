@@ -164,7 +164,7 @@
         <p>
           Front outboard is primarily responsible for steering and (a large portion of) braking, rear outboard is 
           primarily responsible for acceleration and (a smaller portion of) braking, while the friction brakes and 
-          regen straddle in between front and rear.
+          regenerative braking (regen) straddle in between front and rear.
         </p>
         <p>
         Vehicle dynamics is not the focus of this report, but basic understanding of some VD concepts will be required 
@@ -205,7 +205,7 @@
       <div id="sub-section-2-header-1">
         <h3>2.1. Front Outboard</h3>
         <p>
-          R25e’s front outboard design was unable to achieve a higher percentage of Ackermann steering [appendix?], 
+          R25e’s front outboard design was unable to achieve a higher percentage of Ackermann steering [appendix 1], 
           which has always been identified as a design goal as it has the potential to provide greater cornering 
           performance for the type of tracks our cars must negotiate. This is mainly due to packaging constraints of 
           the steering linkage.
@@ -224,7 +224,7 @@
       <div id="sub-section-2-header-3">
         <h3>2.3. Brakes</h3>
         <p>
-          R25e’s regen [appendix?] capabilities are not maximized, as the braking system had no means of actuating only 
+          R25e’s regen capabilities are not maximized, as the braking system had no means of actuating only 
           the front brakes. The loading of the brake pedal was also suboptimal due to the use of extreme brake bias 
           settings.
         </p>
@@ -261,7 +261,7 @@
         <h3>4.1. Morphological Chart</h3>
         <image-component tag="image" source="assets/morphchartwconcepts.png"
           subtitle="Image ?: Morphological chart"></image-component>
-        <p>Various design and component choices were experimented with, each with their unique traits [appendix?]. 3 
+        <p>Various design and component choices were experimented with, each with their unique traits [appendix 2]. 3 
           Concepts were generated. Concept 1 serves as the benchmark and is representative of R25e. Concept 2 is the 
           set of designs that were chosen for R26e. Concept 3 is a collection of experimental designs that ultimately 
           failed to satisfy the selection criterion. 
@@ -618,6 +618,39 @@
           prioritize faster directional change over sustained cornering capabilities.
           </p>
       </p>
+
+      <p>All of this is to say that we would like to experiment with higher Ackermann percentage to investigate its 
+        effects on lap time, and that we are setting pro-Ackermann steering geometry as a design goal.
+      </p>
+
+      <h3>Appendix 2: Design Choices</h3>
+      <p>the main roles of the front outboard components are to steer and brake. Almost all FSAE cars make use of some 
+        form of rack and pinion steering, and almost all FSAE cars make use of multi-piston fixed brake callipers. The 
+        question then becomes that of packaging, and which component should be placed at which location.
+      </p>
+      <p>For rear outboard components (especially for a rear-wheel drive car with a mechanical differential), their main 
+        role is to transmit torque. This means that the hub must be able to receive the torque coming from the 
+        differential, then pass it to the wheels and tyres. This is easier said than done, because the hub may move 
+        in/outboard during suspension travel due to the motion of the upright as constrained by the suspension arms. 
+        This means that the hub must be abled to move in/outboard, but be constrained to the rotation of the half shaft.
+      </p>
+
+      <image-component tag="image" source="assets/jouncescrub.png"
+          subtitle="Image ?: Wheel track variation, this originally showcases the effects of instantaneous centre height
+          on scrub, but one can image scrub as a result of track width change 
+          (Milliken & Milliken, 1995)"></image-component>
+
+      <p>In terms of how the torque is sent to outboard, tractive and cooling department has the final say. Single 
+        piece half shafts with tripod joints will be used, therefore the design of the rear hubs must be able to 
+        accommodate. Typically, the profile of the tripod cup is machined into the hub, but there are also off-the-shelf 
+        solutions such as this adaptor from Taylor Race Engineering. The reasons for integrating the tripod cup into 
+        the hub are weight and size, as a much smaller and lighter hub can be designed.
+      </p>
+
+      <image-component tag="image" source="assets/tripodadaptor.png"
+          subtitle="Image ?: External tripod adaptor sold by Taylor Race Engineering, (https://www.taylor-race.com/
+          products/fsae-aluminum-tri-pod-housing)
+          "></image-component>
 
 
   <!-- This is the code to display the scroll to top button for ergonomic -->
