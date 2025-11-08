@@ -148,13 +148,8 @@
     <sl-divider></sl-divider>
 
     <div>
-
-      <!-- This is an example of what a section might look like -->
       <div id="section-header-1">
         <h2> 1. Background Information </h2>
-        <p>
-          [image placeholder] <a href="#image">Link to the image above</a>
-        </p>
       </div>
 
       <div id="sub-section-1-header-1">
@@ -471,7 +466,7 @@
         exerted by the tripod needs to be studied. Simulation results show that under extreme loads (3G bump with maximum
         acceleration and cornering), 
         the FOS of the hub falls to 1.5 for the harshes load case. When a more realistic load (maximum acceleration)
-        is applied, the FOS rose to 3.56.
+        is applied, the FOS rose to 3.56. Similarly, the FOS of the preload plate rose from 1.3 to 7.1.
       </p>
       <image-component tag="image" source="assets/tripodsim.png"
           subtitle="Image ?: Simulation with effect of tripod torque"></image-component>
@@ -573,6 +568,57 @@
       <div id="appendix">
         <h2>Appendix</h2>
       </div>
+
+      <h3>Appendix 1: Ackermann</h3>
+      <p>Ackermann steering percentage is a measure of how well the vehicle’s steering follows the Ackermann steering 
+        geometry. 100 percent Ackerman takes place when all of the wheels on the vehicles travel on paths that are 
+        concentric to the sane point without any of the wheels scrubbing. This assumes that there is very low slip 
+        angle at all wheels.
+      </p>
+
+      <image-component tag="image" source="assets/ackermann.png"
+          subtitle="Image ?: Ackermann steering geometry (Milliken & Milliken, 1995)"></image-component>
+
+      <p>The actual computation of Ackermann percentage will not be covered here, as it is much easier to use vehicles
+        dynamic softwares such as OptimumK to calculate the value. The only takeaway is that Ackermann can describe the
+        difference between how much each of the front wheels are steered.
+      </p>
+
+      <p>Pro-Ackermann steering tends to be used for race cars that have to traverse technical tracks where turn radii 
+        are tight, and corner speeds are low. Examples include hill climb racing and FSAE. Yet, when consulting the 
+        giants in the race car engineering space as to what is the best, many of the gurus also disagree on what should 
+        be the correct answer. Carol Smith concluded that the racing car should probably have parallel steering, and 
+        that it is not very critical anyway (Smith, 1978). On the other hand, Lars Frömmig argues that the type of 
+        Ackermann should depend on the tire behaviour. If the peak lateral force of the tyre is achieved at the same 
+        angle across all normal loads, parallel steering is desirable. If the ideal slip angle increases with normal 
+        load, then anti-Ackermann should be used to steer the outside wheel more and produce that higher slip (since 
+        that wheel will be more loaded). Lastly, tyres that have decreasing ideal slip angle with increasing normal 
+        load favour pro-Ackermann (Frömmig, 2023). It is also worth noting that our tyres supposedly exhibit increasing 
+        ideal slip angle as normal load increases.
+      </p>
+
+      <p>It would then be hard for me to draw any conclusion other than that the ideal Ackermann percentage would be 
+        influenced by type data and vehicle dynamic models, as we need to predict the load that each tyre will 
+        experience and match the tyres with the correct slip angles. 
+      </p>
+
+      <p>Without a reliable method of measuring slip angles and tyre loads on the actual vehicle, we have to use 
+        intuition. At the speed that we traverse the track, and given the composition of the track, it would require 
+        a few things:
+          <p style="margin-left: 50px; margin-right: 50px;">  
+          1. Large steering input. Tight corners simply mean that drivers have to steer more, and the effects of 
+          Ackermann percentage will only become evident at higher steering input.
+          </p>
+          <p style="margin-left: 50px; margin-right: 50px">
+          2. Low speeds. Unless intentionally forced / unintentionally miscalculated, it is hard to induce large slip 
+          angles on the car given how slow we are going (max 70kph and average 45kph). 
+          </p>
+          <p style="margin-left: 50px; margin-right: 50px">
+          3. Strong initial turn-in. The lack of long sweeping corners and the high frequency of tight manoeuvres 
+          prioritize faster directional change over sustained cornering capabilities.
+          </p>
+      </p>
+
 
   <!-- This is the code to display the scroll to top button for ergonomic -->
   <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
