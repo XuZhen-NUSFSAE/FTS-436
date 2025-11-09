@@ -484,7 +484,7 @@
         exerted by the tripod needs to be studied. Simulation results show that under extreme loads (3G bump with maximum
         acceleration and cornering), 
         the FOS of the hub falls to 1.5 for the harshest load case. When a more realistic load (maximum acceleration)
-        is applied, the FOS rose to 3.56. Similarly, the FOS of the preload plate rose from 1.3 to 7.1.
+        is applied, the FOS rose to 4.0. Similarly, the FOS of the preload plate rose from 1.3 to 7.1.
       </p>
       <image-component tag="image" source="assets/tripodsim.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image 21: Simulation with effect of tripod torque"></image-component>
@@ -740,13 +740,26 @@
           subtitle="Image 29: Preload plate does not pass 3 G bump max accel & corner case"></image-component>
           
       <p>With just acceleration, both the hub and preload plate passes with very hight FOS. This is perhaps a good time 
-        to talk about FOS and load cases.
+        to talk about FOS and load cases. The goal of simulation is to mimic real-life operation as closely as possible. The more confidence we have in 
+        the simulation, the lower we can afford to set the FOS. Due to the nature of racing and out of concerns for safety, we will usually 
+        set the load cases to reflect the performance ceiling in real-life, then also add on FOS as we are unsure of what other events can take 
+        place. Looking at just acceleration, the strength of the design is more than sufficient.
       </p>
       <image-component tag="image" source="assets/hubpass.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image 30: Hub passes 3 G max accel case"></image-component>
       <br>
       <image-component tag="image" source="assets/preloadpass.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image 31: Preload plate passes 3 G bump max accel case"></image-component>
+
+      <p>Therefore, even though the target FOS has not been achieved, a concession was made and the designs were accepted. The purpose of setting a 
+        target FOS is to create a target that can usually be achieved within a reasonable time frame while allowing for adequately lightweight designs. 
+        Majority of the components achieved this goal, but the rear hub needs to be highlighted as it is the first time such a simulation has been ran 
+        in recent years, and that it failed to achieve the target FOS.
+      </p>
+      <p>I foresee that the issue of FOS and load case will continue to haunt future suspension designers to come, and the best advice I can offer is to 
+        examine the load cases to ensure that they follow real-life worst-case scenarios as closely as possible. Keep in mind the constraints of the 
+        simulation, and most importantly know when to stop.
+      </p>
 
 
   <!-- This is the code to display the scroll to top button for ergonomic -->
