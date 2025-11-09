@@ -154,7 +154,7 @@
 
       <div id="sub-section-1-header-1">
         <h3>1.1 Team Structure & Scope of Report</h3>
-        <image-component tag="image" source="assets/team_MIS.jpg"
+        <image-component tag="image" source="assets/team_MIS.jpg" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image 1: NUS FSAE R25e Team at MIS"></image-component>
         <p>
           This report will document the development of front and rear suspension outboard components, as well as 
@@ -171,7 +171,7 @@
         to justify the design decisions made.
         </p>
         <br>
-        <image-component tag="image" source="assets/outboard_overview.png"
+        <image-component tag="image" source="assets/outboard_overview.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image 2: Front, rear outboard and brakes"></image-component>
       </div>
 
@@ -259,7 +259,7 @@
 
       <div id="sub-section-4-header-1">
         <h3>4.1. Morphological Chart</h3>
-        <image-component tag="image" source="assets/morphchartwconcepts.png"
+        <image-component tag="image" source="assets/morphchartwconcepts.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: Morphological chart"></image-component>
         <p>Various design and component choices were experimented with, each with their unique traits [appendix 2]. 3 
           Concepts were generated. Concept 1 serves as the benchmark and is representative of R25e. Concept 2 is the 
@@ -269,7 +269,7 @@
 
       <div id="sub-section-4-header-2">
         <h3>4.2. Scoring</h3>
-        <image-component tag="image" source="assets/scoring.png"
+        <image-component tag="image" source="assets/scoring.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: Scoring of concepts"></image-component>
         <p>Concepts are scored according to whether they managed to fulfil the desired requirements. Concept 2 was 
           chosen in favour of the alternatives, as it only sacrifices some ease of assembly while achieving the goals 
@@ -307,10 +307,10 @@
           achieved, as the steering pickup point will clash with the brake rotor.
         </p>
 
-        <image-component tag="image" source="assets/25steerpackaging.png"
+        <image-component tag="image" source="assets/25steerpackaging.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: R25e's steering packaging"></image-component>
         <br>
-        <image-component tag="image" source="assets/r25ackermann.png"
+        <image-component tag="image" source="assets/r25ackermann.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: R25e Ackermann"></image-component>
         <br>
 
@@ -323,10 +323,10 @@
           R26e manages to maintain its Ackerman percentage above 90 for the entire range of steering.
         </p>
 
-        <image-component tag="image" source="assets/26steerpackaging.png"
+        <image-component tag="image" source="assets/26steerpackaging.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: R26e's steering packaging"></image-component>
         <br>
-        <image-component tag="image" source="assets/r26ackermann.png"
+        <image-component tag="image" source="assets/r26ackermann.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: R26e Ackermann"></image-component>
         
 
@@ -335,7 +335,7 @@
           designed to accommodate all of the components. FEA was employed to analyse the strength of the components, 
           which will be explained in a later segment.
         </p>
-        <image-component tag="image" source="assets/steeringclevismounting.png"
+        <image-component tag="image" source="assets/steeringclevismounting.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: Tight packaging of front outboard on R26e"></image-component>
         <p>The steering clevis is secured to the upright using X2 bolts and blind threaded holes, as opposed to bolts 
           and locknuts with through holes. The upright was designed with machining in mind, therefore the profile of 
@@ -353,7 +353,7 @@
           transfer. When paired with regen, a rear-wheel-drive car like R25e is able to produce enough braking torque 
           on the rear axle without ever activating the friction brakes. 
         </p>
-        <image-component tag="image" source="assets/braketemp.png"
+        <image-component tag="image" source="assets/braketemp.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: Motec data showing low rear brake temperatures"></image-component>
         <p>When we examine Motec data from testing, we can see that the rear rotor only heats up to about 100C with 
           regen implementation, which is covered in the next segment. Realistically, the rear brakes will only be 
@@ -366,17 +366,26 @@
           during operation, yet we are not able to downsize the bearings as the hub cannot be further shrunken (at 
           least not with the existing design).
         </p>
+        <image-component tag="image" source="assets/25rearhub.png" style="margin-left: 100px; margin-right: 100px"
+          subtitle="Image ?: Rear hub design of R25e, note the minimal gap between the bearing surface and the tripod 
+          profile"></image-component>
         <p>The rear brake rotors are also oversized, which is caused by the large wheel bearings and the choice of 
           calliper. Radially mounted ISR callipers were used for their lightweight, but the mounting mechanism forced 
-          the callipers to be mounted further away from the wheel centre, necessitating a larger diameter rotor.
+          the callipers to be mounted further away from the wheel centre, necessitating a larger diameter rotor. On
+          R25e, the rear rotor diameter was 188mm.
         </p>
+        <image-component tag="image" source="assets/radialmount.png" style="margin-left: 100px; margin-right: 100px"
+          subtitle="Image ?: Radially mounted ISR brakes require thread engagement in the direction that pushes
+          the calliper outwards"></image-component>
         <p>To solve this problem, a new hub design is being implemented where the profile of the hub is cut down to the 
           bare minimum without clashing with the half shaft tripod. This lowered the required ID of the hub bearing to 
           60mm, but the design does generate some concerns regarding the strength of the preload plate. An extensive 
           study on the design of the preload plate was then conducted, resulting in a slightly heavier but sufficiently 
           strong design. The simulation setup will also be covered later.
         </p>
-        
+        <image-component tag="image" source="assets/26rearhub.png" style="margin-left: 100px; margin-right: 100px"
+          subtitle="Image ?: Rear hub design of R26e, profile of the hub is further reduced using a new design">
+        </image-component>
         <p>NSK is currently a sponsor of the NUS FSAE team, and they offer bearings of the specified size in their catalogue. 
           The bearings also exceed the load specifications, but further downsizing would require completely different 
           methods of transmitting torque to the outboard. For now, NSK’s 7912 series are the smallest hub bearings that 
@@ -388,6 +397,9 @@
           reduced the required size of the rotor, resulting in a reduction in diameter from 188mm to 172mm. The design 
           of the rotors will not be covered in the interim report.
         </p>
+        <image-component tag="image" source="assets/axialmount.png" style="margin-left: 200px; margin-right: 200px"
+          subtitle="Image ?: Axially mounted AP callipers can be mounted closer to wheel centre">
+        </image-component>
         <p>All of the component and design changes resulted in significant weight savings, which will be covered in the 
           segment on design outcomes.
         </p>
@@ -416,11 +428,17 @@
           used. This caused twisting in the brake pedal box assembly, and even though the components designed by our 
           team survived the season thanks to rigorous FEA, the ones bought off the shelf are much worse for wear.
         </p>
+        <image-component tag="image" source="assets/pedaltwist.png" style="margin-left: 100px; margin-right: 100px"
+          subtitle="Image ?: FEA intended to test the effects of extreme bias, image curtesy of future system department">
+        </image-component>
         <p>R26e will use an electronic shutoff valve, which when energized cuts off hydraulic pressure to the rear. It 
           is a normally open valve, so that in the event of loosing GLV, the system will continue to allow fluid flow. 
           When the driver presses the brake pedal and front line pressure builds up, the valve will be activated. This 
           will stop the pressure in the rear line from increasing, allowing for more regen.
         </p>
+        <image-component tag="image" source="assets/cutoffvalve.png" style="margin-left: 100px; margin-right: 100px"
+          subtitle="Image ?: Wilwood part number 260-9921 (www.wilwood.com)">
+        </image-component>
         <p>Additionally, a more neutral balance bar position can be used, and twisting of the pedal can be reduced. 
           Master cylinder choices will also be opened up, as the old car also relied on bore sizes of master cylinders 
           to strike a balance between still being able to pass brake test and being able to send more braking force to 
@@ -441,7 +459,7 @@
         of the car, and the breakdown of the optimization & analysis results is as follows:
       </p>
 
-      <image-component tag="image" source="assets/fearesults.png"
+      <image-component tag="image" source="assets/fearesults.png" 
           subtitle="Image ?: FEA optimization outcome"></image-component>
       
       <p>It needs to be mentioned that the purpose of the simulation is to study the behaviour of the components under 
@@ -454,7 +472,7 @@
         stress singularities. Fastener holes and sharp transitions are usually the cause, and results that fall short of 
         the target FOS were individually examined to determine the reason.
       </p>
-      <image-component tag="image" source="assets/singularity.png"
+      <image-component tag="image" source="assets/singularity.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: Example of stress singularity"></image-component>
       <p>The components also went through multiple design iterations and sometimes complete overhauls as some concepts 
         proved to be not feasible. Notably, the rear hub design received additional attention as it is a simulation that 
@@ -468,7 +486,7 @@
         the FOS of the hub falls to 1.5 for the harshes load case. When a more realistic load (maximum acceleration)
         is applied, the FOS rose to 3.56. Similarly, the FOS of the preload plate rose from 1.3 to 7.1.
       </p>
-      <image-component tag="image" source="assets/tripodsim.png"
+      <image-component tag="image" source="assets/tripodsim.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image ?: Simulation with effect of tripod torque"></image-component>
 
       
@@ -520,6 +538,8 @@
           writing, the component designs have been finalized, and machining drawings are being produced. Manufacturing 
           will begin shortly after, and all components will be received around Jan 2026. 
         </p>
+        <image-component tag="image" source="assets/gantt.png"
+          subtitle="Image ?: Gantt chart for R26r timeline"></image-component>
 
       <div id="sub-section-8-header-2">
         <h3>8.2. Short Term Goals</h3>
