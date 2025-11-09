@@ -240,10 +240,10 @@
       <div id="section-header-3">
         <h2>3. Design Goal</h2>
         <p>
-          The overall team goal for R26e is to decrease lap time by 10% through imporved reliability. While the team 
+          The overall team goal for R26e is to decrease lap time by 10% through improved reliability. While the team 
           goal mainly concerns the powertrain departments, I intend to contribute towards the 10% lap time reduction 
           by 
-          <strong>designing a set of lightweight outboard components for the syspension system that satisfy geometry 
+          <strong>designing a set of lightweight outboard components for the suspension system that satisfy geometry 
           requirements.</strong>
         </p>
       </div>
@@ -271,8 +271,8 @@
         <h3>4.2. Scoring</h3>
         <image-component tag="image" source="assets/scoring.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image 4: Scoring of concepts"></image-component>
-        <p>Concepts are scored according to whether they managed to fulfil the desired requirements. Concept 2 was 
-          chosen in favour of the alternatives, as it only sacrifices some ease of assembly while achieving the goals 
+        <p>Concepts are scored according to whether they managed to fulfill the desired requirements. Concept 2 was 
+          chosen over the alternatives, as it only sacrifices some ease of assembly while achieving the goals 
           of light weight and geometry, which will be explained in the following section on detail design. As to what
           the criteria entail, the next segment will elaborate futher.
         </p>
@@ -464,7 +464,7 @@
       
       <p>It needs to be mentioned that the purpose of the simulation is to study the behaviour of the components under 
         worst case conditions, i.e. with no fastener tension or friction. Tyres are also taken to be operating outside 
-        of the performance evelope as we have no way of extrapolating the actual operating limits of the car and applying a 
+        of the performance envelope as we have no way of extrapolating the actual operating limits of the car and applying a 
         realistic load case [appendix 5].
       </p>
       <p>The weight calculation at this point is based on mass in Solidworks and product specifications. This will be 
@@ -501,10 +501,11 @@
       <div id="sub-section-7-header-1">
         <h3>7.1. Value Proposition</h3>
         <p>The new changes bring about higher sustained Ackermann steering percentage, weight reduction of 0.6kg and 
-        improved regen head room, satisfying the goal of designing lightweight components that support the desired 
-        geometry. It is hoped that we would be able to verify the effects of higher Ackermann, and that the shutoff 
+        improved regen head room. The designs achieved the desired geometry, followed optimal componnent mounting locations, hence 
+        satisfying the overall design goal. It is hoped that we would be able to verify the effects of higher Ackermann, and that the shutoff 
         valve works reliably.
         </p>
+        <p>We wish to see imporved lap times, trouble-free installation and </p>
 
       <div id="sub-section-7-header-2">
         <h3>7.2. Limitations</h3>
@@ -519,7 +520,7 @@
         circumference of the profile. As such, a tight sliding fit of h6 is called for.
       </p>
       <p>The addition of the shutoff valve brings with it more hydraulic connections, which are point of failures. 
-        The NPT inlet and outlet that come with the shutoff valve can be difficult to install correctly due to the 
+        The NPT inlet and outlet [appendix 6] that come with the shutoff valve can be difficult to install correctly due to the 
         tapered threads, and utmost care is required to ensure that there is no leak.
       </p>
 
@@ -578,6 +579,9 @@
         <li>
           Angular contact bearings and the possible arrangements, NSK, https://www.nsk.com/products/ball-bearings/
           angular-contact-ball-bearings/
+        </li>
+        <li>
+          NPT thread, https://www.buyfittingsonline.com/pages/npt-vs-nps-vs-nptf-thread-connections-the-difference.html
         </li>
       </ul>
     </div>
@@ -760,6 +764,13 @@
         examine the load cases to ensure that they follow real-life worst-case scenarios as closely as possible. Keep in mind the constraints of the 
         simulation, and most importantly know when to stop.
       </p>
+
+      <h3>Appendix 6: NPT standard</h3>
+      <p>NPT stands for National Pipe Thread, which is a thread standard from the US. It is characterized by its tapered thread and requires the used
+        of PTFE sealing tape.
+      </p>
+      <image-component tag="image" source="assets/NPT.png" style="margin-left: 100px; margin-right: 100px"
+          subtitle="Image 32: Cross section of NPT vs straight thread"></image-component>
 
 
   <!-- This is the code to display the scroll to top button for ergonomic -->
