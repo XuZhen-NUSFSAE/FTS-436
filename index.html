@@ -148,11 +148,9 @@
       </p>
       <p>My senior for the 25 season, Pei Herng, was the largest positive influence to me and the inspiration for our 
         entire team to align our focus for the 26 season: fundamentals. Understanding the physics behind the car, and 
-        being unbiased when making decisions goes a long way in preventing tunnel visioning and nepotism. No car will 
-        ever be perfect, but R25e's biggest flaw is not in itself; rather, the toxic and frankly dangerous interpersonal 
-        dynamics was the roadblock that prevented the team from progressing further. Even though his voice was often 
-        lost in the noise that is selfish individuals pushing their personal agendas, Pei Herng pressed on and 
-        persevered until the end.
+        being unbiased when making decisions goes a long way in preventing tunnel visioning and nepotism. In times where 
+        personal agendas and nepotism threatened progress, Pei Herng pressed on and persevered until the end, never losing 
+        sight of what is right.
       </p>
       <p>I hope to emulate the righteous spirit that Pei Herng embodies, and together with my colleague Sam, we begin 
         work on NUS FSAE's next car, R26e.
@@ -361,7 +359,9 @@
         <br>
 
         <p>As a result, R25e’s Ackermann percentage drops to below 80% as the steering angle reaches maximum, requiring 
-          1.5° of static toe out to compensate, resulting in additional drag in the straights and .
+          1.5° of static toe out to compensate, resulting in additional drag in the straights and heats up the tyres 
+          excessively
+          (Milliken, 1995).
         </p>
         <p>On R26e, steering actuation is moved to the rear and the mounting of the steering clevis is integrated
           with that of the brake callipers. This was made possible also by a 30mm wheelbase increase, which better 
@@ -523,7 +523,9 @@
         <h2>6. Analysis</h2>
       </div>
       <p>All component designs are validated in Ansys FEA. The requirement for FOS is 2.0, as it strikes a balance 
-        between development time and weight savings. Load cases are computed using excel based on physical properties 
+        between development time and weight savings. The weight calculation at this point is based on mass in 
+        Solidworks and product specifications. This will be 
+        checked again during assembly phase.Load cases are computed using excel based on physical properties 
         of the car, and the breakdown of the optimization & analysis results is as follows:
       </p>
 
@@ -535,15 +537,17 @@
         of the performance envelope as we have no way of extrapolating the actual operating limits of the car and applying a 
         realistic load case [appendix 6].
       </p>
-      <p>The weight calculation at this point is based on mass in Solidworks and product specifications. This will be 
-        checked again during assembly phase. Components are optimized to the target FOS of 2.0, striking a balance 
-        between development time and weight savings.
-      </p>
       <p>The components also went through multiple design iterations and sometimes complete overhauls as some concepts 
         proved to be not feasible. Notably, the rear hub design received additional attention as it is a simulation that 
         has not been performed on R25e. In total, over 500 hours of simultion was performed for 15 setups of various types,
         adding up to 170,000 GB of writes and 70,000 GB of reads.
       </p>
+      <image-component tag="image" source="assets/oldfrontupright.png" style="margin-left: 200px; margin-right: 200px"
+          subtitle="Image 25: One of the earlier upright designs that was dropped due to poor manufacturability and 
+          poor componnet mounting location"></image-component>
+      <br>
+      <image-component tag="image" source="assets/fearuntime.png"
+          subtitle="Image 26: Simulation runtime drastically increases after adding tripod torque"></image-component>
 
       
     <br />
@@ -583,7 +587,7 @@
           will begin shortly after, and all components will be received around Jan 2026. 
         </p>
         <image-component tag="image" source="assets/gantt.png"
-          subtitle="Image 25: Gantt chart for R26e timeline"></image-component>
+          subtitle="Image 27: Gantt chart for R26e timeline"></image-component>
 
       <div id="sub-section-8-header-2">
         <h3>8.2. Short Term Goals</h3>
@@ -596,10 +600,8 @@
       <div id="sub-section-8-header-3">
         <h3>8.3. Long Term Goals</h3>
         <p>In the long run, more work will be done on the detail design of the friction brake system. This will include 
-          master cylinder selection, hydraulics, brake rotor design and simulation (structural & thermal). The goal is 
-          to collect more data on real life brake thermal behaviour, as we have a limited simulation suite to perform 
-          initial brake design. There are also existing shortcomings of the simulation model that have not been 
-          resolved. These will be covered in the final report.
+          master cylinder selection, hydraulics, brake rotor design and simulation (structural & thermal). Anti-roll bar 
+          design, manufacturing, and tuning will also be performed.
         </p>
         <p>Word count: 2941</p>
 
@@ -653,7 +655,7 @@
       </p>
 
       <image-component tag="image" source="assets/ackermann.png"
-          subtitle="Image 26: Ackermann steering geometry (Milliken & Milliken, 1995)"></image-component>
+          subtitle="Image 28: Ackermann steering geometry (Milliken & Milliken, 1995)"></image-component>
 
       <p>The actual computation of Ackermann percentage will not be covered here, as it is much easier to use vehicles
         dynamic softwares such as OptimumK to calculate the value. The only takeaway is that Ackermann can describe the
@@ -708,7 +710,7 @@
         mass helps to reduce the response gain at mid to lower frequencies, which is exactly where our car operates. 
       </p>
       <image-component tag="image" source="assets/wheelhop.png"
-          subtitle="Image 27: Graph showing the effects of unsprung mass on wheel hop responances
+          subtitle="Image 29: Graph showing the effects of unsprung mass on wheel hop responances
            (Gillespie, 1991)"></image-component>
 
 
@@ -725,7 +727,7 @@
       </p>
 
       <image-component tag="image" source="assets/jouncescrub.png"
-          subtitle="Image 28: Wheel track variation, this originally showcases the effects of instantaneous centre height
+          subtitle="Image 30: Wheel track variation, this originally showcases the effects of instantaneous centre height
           on scrub, but one can image scrub as a result of track width change 
           (Milliken & Milliken, 1995)"></image-component>
 
@@ -737,7 +739,7 @@
       </p>
 
       <image-component tag="image" source="assets/tripodadaptor.png" style="margin-left: 100px; margin-right: 100px"
-          subtitle="Image 29: External tripod adaptor sold by Taylor Race Engineering, (https://www.taylor-race.com/
+          subtitle="Image 31: External tripod adaptor sold by Taylor Race Engineering, (https://www.taylor-race.com/
           products/fsae-aluminum-tri-pod-housing)
           "></image-component>
 
@@ -774,7 +776,7 @@
         bearings vulnerable to axial loads.
       </p>
       <image-component tag="image" source="assets/angularcontact.png"
-          subtitle="Image 30: Angular contact bearings shown in back-to-back, face-to-face and tandem arangements
+          subtitle="Image 32: Angular contact bearings shown in back-to-back, face-to-face and tandem arangements
            (NSK)"></image-component>
 
       
@@ -794,7 +796,7 @@
       </p>
 
       <image-component tag="image" source="assets/GG.png"
-          subtitle="Image 31: G-G diagram of a F1 car, c.1971, Milliken 1995"></image-component>
+          subtitle="Image 33: G-G diagram of a F1 car, c.1971, Milliken 1995"></image-component>
 
       <p>In our simulation, acceleration is set to be 1 G, Cornering at 2 G and Braking at -1.8 G. 
         These are not sustainable figures, but they 
@@ -810,7 +812,7 @@
         of PTFE sealing tape.
       </p>
       <image-component tag="image" source="assets/NPT.png" style="margin-left: 100px; margin-right: 100px"
-          subtitle="Image 32: Cross section of NPT vs straight thread"></image-component>
+          subtitle="Image 34: Cross section of NPT vs straight thread"></image-component>
 
 
   <!-- This is the code to display the scroll to top button for ergonomic -->
