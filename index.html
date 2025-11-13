@@ -292,7 +292,7 @@
           considered. Concepts are scored according to whether they managed to fulfill the desired requirements. Concept 2 was 
           chosen over the alternatives, as it only sacrifices some ease of assembly while achieving the goals 
           of light weight and geometry, which will be explained in the following section on detail design. As to what
-          the criteria entail, the next segment will elaborate futher.
+          the criteria entail, the next segment will elaborate further.
         </p>
 
         
@@ -366,7 +366,7 @@
         <p>On R26e, steering actuation is moved to the rear and the mounting of the steering clevis is integrated
           with that of the brake callipers. This was made possible also by a 30mm wheelbase increase, which better 
           aligns the steering rack. Actuating steering from the rear allows for more freedom in linkage placement, and 
-          R26e manages to maintain its Ackerman percentage above 90 for the entire range of steering.
+          R26e manages to maintain its Ackermann percentage above 90 for the entire range of steering.
         </p>
 
         <image-component tag="image" source="assets/26steerpackaging.png" style="margin-left: 100px; margin-right: 100px"
@@ -500,7 +500,7 @@
           subtitle="Image 22: FEA intended to test the effects of extreme bias, image curtesy of future system department">
         </image-component>
         <p>R26e will use an electronic shutoff valve, which when energized cuts off hydraulic pressure to the rear. It 
-          is a normally open valve, so that in the event of loosing GLV, the system will continue to allow fluid flow. 
+          is a normally open valve, so that in the event of low voltage system failure, the system will continue to allow fluid flow. 
           When the driver presses the brake pedal and front line pressure builds up, the valve will be activated. This 
           will stop the pressure in the rear line from increasing, allowing for more regen.
         </p>
@@ -522,11 +522,15 @@
       <div id="section-header-6">
         <h2>6. Analysis</h2>
       </div>
-      <p>All component designs are validated in Ansys FEA. The requirement for FOS is 2.0, as it strikes a balance 
+      <p>All component designs are validated in Ansys FEA. The requirement for FOS (Factor of Safety) is 2.0, as it strikes a balance 
         between development time and weight savings. The weight calculation at this point is based on mass in 
-        Solidworks and product specifications. This will be 
-        checked again during assembly phase.Load cases are computed using excel based on physical properties 
-        of the car, and the breakdown of the optimization & analysis results is as follows:
+        Solidworks and product specifications. This will be checked again during assembly phase. 
+      </p>
+      <p>Load cases are computed using excel based on physical properties of the car, and quarter car models were used 
+        to validate component design. A total of 9 load cases are investigated, ranging from normal operating conditions 
+        to worst-case-scenarios. Components that fail to reach FOS 2.0 are reinforced, and components exceeding FOS 2.0 
+        are lightened. The breakdown of the optimization & analysis results is as follows, with a total weight saving of 
+        0.6 kg:
       </p>
 
       <image-component tag="image" source="assets/fearesults.png" style="margin-left: 100px; margin-right: 100px"
@@ -539,7 +543,7 @@
       </p>
       <p>The components also went through multiple design iterations and sometimes complete overhauls as some concepts 
         proved to be not feasible. Notably, the rear hub design received additional attention as it is a simulation that 
-        has not been performed on R25e. In total, over 500 hours of simultion was performed for 15 setups of various types,
+        has not been performed on R25e. In total, over 500 hours of simulation was performed for 15 setups of various types,
         adding up to 170,000 GB of writes and 70,000 GB of reads.
       </p>
       <image-component tag="image" source="assets/oldfrontupright.png" style="margin-left: 200px; margin-right: 200px"
@@ -591,7 +595,7 @@
 
       <div id="sub-section-8-header-2">
         <h3>8.2. Short Term Goals</h3>
-        <p>Once the car can be assembled, testing agendas include data collection on the effects of Ackerman percentage 
+        <p>Once the car can be assembled, testing agendas include data collection on the effects of Ackermann percentage 
           increase, validation and reliability testing of the shutoff valve, as well as general shakedown to ensure 
           that all components are performing as expected. There is also the plan to implement electronic brake bias 
           adjustments, as regen is expected to take over braking at the rear axle.
