@@ -198,7 +198,7 @@
           I intend to overhaul the component designs for this season, trading potential testing time for the opportunity 
           to implement different ideas that push past the bottlenecks. Many of the ideas have been thrown around in 
           suspension departments even with the previous cohorts, but they were not considered seriously. Given the time 
-          crunch, my new designs will not drastically differ from that of my seniors, but I hope that experiences gained in trial 
+          crunch, I am unable to fully perfect my designs, but I hope that experiences gained in trial 
           and error can provide valuable insights for future generations of suspension designers.
         </p>
       </div>
@@ -260,11 +260,14 @@
         </p>
         <p>
         The new changes would bring about higher sustained Ackermann steering percentage, which will allow us to 
-        investigate the effects of higher Ackermann percentage. Static toe was used to increase the Ackermann percentage
-        at higher steering angles, but static toe out leads to more drag and should be used sparingly.
+        investigate its effects. Static toe was used to increase the Ackermann percentage
+        at higher steering angles, but static toe out leads to more drag and should be used sparingly. Having the ability 
+        to run higher sustained Ackermann while using less aggressive toe out should slow down tyre degredation if nothing else. 
         Outboard components will be lightened, leading to
-        lighter unsprung mass which benefits ride performance (Gillespie, 1991) [appendix 2].
-        Regen head room will be also improved.
+        lighter unsprung mass which benefits ride performance (Gillespie, 1991) [appendix 2]. Given the same weight reduction amount, 
+        it is almost always desirable to shed unsprung mass compared to sprung mass, as the tyres will be able to follow 
+        the road surface more closely and provide better grip.
+        Regen head room will be also increased, together with improved load condition on the brake pedal.
         </p>
       </div>
 
@@ -322,7 +325,7 @@
           2. Brake calliper
           </p>
           <p style="margin-left: 50px; margin-right: 50px">
-          3. Front Upright
+          3. Front upright
           </p>
           <p style="margin-left: 50px; margin-right: 50px">
           4. Wheel speed sensor
@@ -331,9 +334,9 @@
           5. Camber clevis
           </p>
         </p>
-        <p>The challenge faced by the previous iterations of NUS FSAE race cars is that of packaging. The steering 
-          clevis is located on the front of the upright for a few reasons, and even though the morphological chart 
-          includes 4 variations of packaging, 2 are inferior based on the mounting location of the brake calliper.
+        <p>The challenge faced by the previous iterations of NUS FSAE race cars is that of packaging. Steering actuation and 
+          brake calliper mounting both required substantial space, and a compromise was made. Specifically, the brake calliper 
+          was given the space on the trailing side of the upright, and steering was given the front.
         </p>
         <image-component tag="image" source="assets/brakeforces.png"
           subtitle="Image 8: Forces during braking"></image-component>
@@ -349,9 +352,9 @@
           Conversely, placing the calliper on the leading side of the upright will add to the force exerted by the 
           ground, causing higher loads. [appendix 4]
         </p>
-        <p>Of the other 2 possibilities, steering actuation from the front was used because it better aligned with the 
-          steering rack and allows for easier packaging. The drawback is that higher Ackermann percentage cannot be 
-          achieved, as the steering pickup point will clash with the brake rotor.
+        <p>After allocating space for the brake calliper, steering actuation from the front was used because it better aligned with the 
+          steering rack and allowed for easier packaging on R25e. The drawback was that higher Ackermann percentage could not be 
+          achieved, as the steering pickup point would clash with the brake rotor.
         </p>
 
         <image-component tag="image" source="assets/25steerpackaging.png" style="margin-left: 100px; margin-right: 100px"
@@ -363,8 +366,7 @@
 
         <p>As a result, R25e’s Ackermann percentage drops to below 80% as the steering angle reaches maximum, requiring 
           1.5° of static toe out to compensate, resulting in additional drag in the straights and heats up the tyres 
-          excessively
-          (Milliken, 1995).
+          excessively (Milliken, 1995).
         </p>
         <p>On R26e, steering actuation is moved to the rear and the mounting of the steering clevis is integrated
           with that of the brake callipers. This was made possible also by a 30mm wheelbase increase, which better 
@@ -388,7 +390,9 @@
           subtitle="Image 13: Tight packaging of front outboard on R26e"></image-component>
         <p>The steering clevis is secured to the upright using X2 bolts and blind threaded holes, as opposed to bolts 
           and locknuts with through holes. The upright was designed with machining in mind, therefore the profile of 
-          the upright as well as any lightening cuts are aligned with the principal axes as much as possible.
+          the upright as well as any lightening cuts are aligned with the principal axes as much as possible. In the end, 
+          the optimal mounting location of the brake calliper was preserved, but much higher sustained Ackermann could be 
+          achieved thanks to the new design.
         </p>
         <image-component tag="image" source="assets/steeringclevismountingalt.png" style="margin-left: 200px; margin-right: 200px"
           subtitle="Image 14 Tight packaging of front outboard on R26e, alternate angle"></image-component>
@@ -425,10 +429,13 @@
           subtitle="Image 16: Motec data showing low rear brake temperatures"></image-component>
         <p>When we examine Motec data from testing, we can see that the rear rotor only heats up to about 100C with 
           regen implementation, which is covered in the next segment. Realistically, the rear brakes will only be 
-          heavily leaned upon during the brake test, which removes the need to consider the effects of thermal strain.
+          heavily leaned upon during the brake test, which removes the need to consider the effects of thermal strain. 
+          2 conclusions can be drawn from this data. Firstly, the rear rotors are under-utilized and should be downsized. 
+          Secondly, regen on R25e though effective, is not able to fully recover all available energy and some of that 
+          energy is captured by the friction brakes and turned into heat.
         </p>
-        <p>The rear hub bearings on R25e are angular contact ball bearings [appendix 5] with ID of 70mm and OD of 100mm. 
-          These 
+        <p>Shifting our attention to the hub, the rear hub bearings on R25e are angular contact ball bearings 
+          [appendix 5] with ID of 70mm and OD of 100mm. These 
           bearings are used in pairs to provide rigidity against moments generated by the tyres due to cornering and 
           normal forces. On paper, the load capacity of these bearing far exceeds the loads that R25e can generate 
           during operation, yet we are not able to downsize the bearings as the hub cannot be further shrunken (at 
@@ -437,7 +444,7 @@
         <image-component tag="image" source="assets/25rearhub.png" style="margin-left: 150px; margin-right: 150px"
           subtitle="Image 17: Rear hub design of R25e, note the minimal gap between the bearing surface and the tripod 
           profile"></image-component>
-        <p>The rear brake rotors are also oversized, which is caused by the large wheel bearings and the choice of 
+        <p>The oversized rear rotors then stem from the use of the large wheel bearings and the choice of 
           calliper. Radially mounted ISR callipers were used for their lightweight, but the mounting mechanism forced 
           the callipers to be mounted further away from the wheel centre, necessitating a larger diameter rotor. On
           R25e, the rear rotor diameter was 188mm.
