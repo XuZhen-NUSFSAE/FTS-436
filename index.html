@@ -496,15 +496,16 @@
           negative torque command to motor.
           </p>
         </p>
-        <p>However, there are still teething issues with the system, both in terms of regen efficiency and physical 
-          design. Due to the design of the balance bar, it is not possible to divert all of the braking force to the 
-          front axle, resulting in the rear brakes being actuated even though regen is capable of braking the rear 
-          axle on its own. As mentioned in the previous segment, some heating of the rear rotor is still observed, 
+        <p>However, there were still teething issues with the system, both in terms of regen efficiency and physical 
+          design. Due to the design of the balance bar, it was not possible to divert all of the braking force to the 
+          front axle, resulting in the rear brakes being actuated even though regen was capable of braking the rear 
+          axle on its own. As mentioned in the previous segment, some heating of the rear rotor was still observed, 
           which means that regen has not recuperated all of the available energy.
         </p>
         <p>In order to send the most braking force to the front and maximize regen, extreme bias settings were also 
           used. This caused twisting in the brake pedal box assembly, and even though the components designed by our 
-          team survived the season thanks to rigorous FEA, the ones bought off the shelf are much worse for wear.
+          team survived the season thanks to rigorous FEA, the ones bought off the shelf were much worse for wear by the 
+          end of it.
         </p>
         <image-component tag="image" source="assets/pedaltwist.png" style="margin-left: 100px; margin-right: 100px"
           subtitle="Image 23: FEA intended to test the effects of extreme bias, image curtesy of future system department">
@@ -551,8 +552,8 @@
         of the performance envelope as we have no way of extrapolating the actual operating limits of the car and applying a 
         realistic load case [appendix 6].
       </p>
-      <p>The components also went through multiple design iterations and sometimes complete overhauls as some concepts 
-        proved to be not feasible. Notably, the rear hub design received additional attention as it is a simulation that 
+      <p>The components went through multiple design iterations and sometimes complete overhauls as some concepts 
+        proved to be not feasible. Notably, the rear hub design received additional attention as it was a simulation that 
         has not been performed on R25e. In total, over 500 hours of simulation was performed for 15 setups of various types,
         adding up to 170,000 GB of writes and 70,000 GB of reads.
       </p>
@@ -566,7 +567,8 @@
       <p>In total, over 500 hours of simulation was performed for 15 setups of various types,
         adding up to 170,000 GB of writes and 70,000 GB of reads. Major overhauls in designs and component choices were 
         performed to achieve maximum weight savings, with multiple iterations of front and rear outboard designs before 
-        arriving at the final design. 
+        arriving at the final design. Many of the simulations continue till this date, as I continue to improve the 
+        methodologies used.
 
       </p>
       
@@ -584,11 +586,15 @@
       <p>The new rear hub design allows for significant weight savings, but manufacturing and assembly also becomes 
         more complicated. Specifically, bearing tolerance is something that needs to be controlled more tightly, as 
         excessively tight press fit can cause much more damage to the islands compared to a hub that has the full 
-        circumference of the profile. As such, a tight sliding fit of h6 is called for.
+        circumference of the profile. As such, a tight sliding fit of h6 is called for, which will add onto machining costs 
+        and require careful inspections to ensure that the tolerance is followed correctly.
       </p>
       <p>The addition of the shutoff valve brings with it more hydraulic connections, which are point of failures. 
         The NPT inlet and outlet [appendix 7] that come with the shutoff valve can be difficult to install correctly due to the 
-        tapered threads, and utmost care is required to ensure that there is no leak.
+        tapered threads, and utmost care is required to ensure that there is no leak. The flow direction and mounting 
+        requirements (must be installed in the vertical orientation) forced the componnent to be installed on the right side 
+        of the car, which made packaging more complicated. Similar to the front outboard componnents, careful installation 
+        would be required.
       </p>
 
     
