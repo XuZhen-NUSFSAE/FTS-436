@@ -56,120 +56,137 @@
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-2">2. Problem Definition</a>
+          <a href="#section-header-2">2. Brakes</a>
           <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Front Outboard</a>
+            <a href="#sub-section-2-header-1">2.1. Plumbing and installation</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Rear Outboard</a>
+            <a href="#sub-section-2-header-2">2.2. Bedding</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#sub-section-2-header-3">2.3. Brakes and Regen</a>
+            <a href="#sub-section-2-header-3">2.3. Shutoff valve and regen</a>
           </sl-tree-item>
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-3">3. Design Goal</a>
-          </sl-tree-item>
-
-        <sl-tree-item expanded>
-          <a href="#section-header-4">4. Concept Selection</a>
-          <sl-tree-item>
-            <a href="#sub-section-4-header-1">4.1. Morphological Chart</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-4-header-2">4.2. Scoring of Concepts</a>
-          </sl-tree-item>
+          <a href="#section-header-3">3. Hub bearings and preload</a>
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-5">5. Detailed Design</a>
-          <sl-tree-item>
-            <a href="#sub-section-5-header-1">5.1. Front Outboard</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-5-header-2">5.2. Rear Outboard</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-5-header-3">5.3. Brakes and Regen</a>
-          </sl-tree-item>
+          <a href="#section-header-4">4. Outboard component stiffness testing</a>
+        </sl-tree-item>
+
+        <sl-tree-item expanded>
+          <a href="#section-header-5">5. Future Works</a>
         </sl-tree-item>
 
         <sl-tree-item>
-          <a href="#section-header-6">6. Analysis (simulation)</a>
+          <a href="#section-header-6">6. Conclusion</a>
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-7">7. Limitations</a>
+          <a href="#section-header-7">7. Appendix</a>
         </sl-tree-item>
 
         <sl-tree-item expanded>
-          <a href="#section-header-8">8. Future Works</a>
-          <sl-tree-item>
-            <a href="#sub-section-8-header-1">8.1. Gantt Chart</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-8-header-2">8.2. Short-term Goals</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-8-header-3">8.3. Long-term Goals</a>
-          </sl-tree-item>
+          <a href="#section-header-8">8. References</a>
         </sl-tree-item>
 
-        <sl-tree-item>
-          <a href="#references">References</a>
-        </sl-tree-item>
-
-        <sl-tree-item>
-          <a href="#appendix">Appendix</a>
-        </sl-tree-item>
       </sl-tree>
     </div>
     <sl-divider></sl-divider>
 
     <div>
       <div id="section-header-1">
-        <h2> 1. Background Information </h2>
+        <h2> 1. Introduction </h2>
         <p>
           The interim report concluded during the manufacturing phase of the 2026 season, where all the components have been 
           designed and sent out to machine shops. At the time of writing, R26e has been assembled and basic functionality test 
-          are performed. This report will pick up from the interim report and document the installation and validation of the 
-          various components.
+          are performed. 
+        </p>
+        <p>Due to some unforeseen delays during the CNY period, shakedown of R26e was postponed to March 28th, 2026. The team 
+          will continue to stress test and fine-tune the car until the competition in July 2026.
+        </p>
+        <p>This report will pick up from the interim report and document the installation and validation of the various 
+          components. The scope covers the installation of brake hydraulics, hub bearings and preloads, suspension toe and 
+          camber stiffness, as well as documentation of manufacturing techniques.
         </p>
     </div>
     <br />
     <sl-divider></sl-divider>
     <div>
       <div id="section-header-2">
-        <h2>2. Problem Definition</h2>
+        <h2>2. Brakes</h2>
       </div>
 
       <div id="sub-section-2-header-1">
-        <h3>2.1. Front Outboard</h3>
+        <h3>2.1. Plumbing and installation</h3>
         <p>
-          R25e’s front outboard design was unable to achieve a higher sustained percentage of Ackermann steering 
-          [appendix 1] due to packaging constraints of 
-          the steering linkage, 
-          although Ackermann was identified as a design goal as it has the potential to provide greater cornering 
-          performance for the type of tracks our cars must negotiate. 
+          Brake lines were manufactured and installed onto the car. R26e utilizes 3AN stainless steel braided lines for its 
+          brake system. A combination of direct thread and banjo hose ends were used depending on the location and accessibility 
+          of the connection. The BOM is as follows:
+        </p>
+        <p>
+          The addition of dry ice cooling containers presented a unique challenge for routing the brake lines. The usual path to the 
+          rear of the chassis has been blocked off, and the rule that prevents routing under the chain still applies. The shutoff 
+          solenoid also had to be mounted in a location that is both well protected and easy to access for brakes bleeding, with the 
+          pressure sensor mounted further downstream instead of at the pedal box. 
+        </p>
+        <p>Hence, the brake lines were carefully laid out in CAD over multiple iterations to ensure no clashing with other 
+          components. A detailed brake line fabrication workflow will be illustrated in [Appendix 1] for reference.
+        </p>
+        <p>For the brake rotors, brakes buttons and shims were used to secure them onto the hubs. The floating rotor system allows 
+          for outward thermal expansion when the rotor heats up. It also allows for small amounts of left-to-right movement of 
+          the rotors to account for the rigidly mounted callipers. However, there is no radial play of the rotors relative to 
+          the hubs, as it can cause excessive vibrations and lead to the eventual failure of the components. 
+        </p>
+        <p>In this use case, brake buttons should be treated as a wear item and inspected routinely for any irregularity. Should 
+          there be excessive play between the rotor and the hub, it could be a sign that the brake buttons have been eroded and 
+          therefore not fully supporting the rotor. The brake buttons should then be replaced as soon as possible. The previous 
+          season’s race car, R25e, covered a total of 400km before a noticeable rattle occurred within the brake system. It was 
+          found during inspection that the brake buttons were so worn out that the free play allowed them to contact the brake 
+          callipers. Fortunately, the incident only resulted in minor scratches, but it drives home the importance of routing 
+          inspections and maintenance.
+        </p>
+        <p>Once the brakes were installed, hydraulics were bled and friction surfaces were degreased and bedded in to ensure 
+          optimal braking response. Brake temperature sensors monitored the heating of each rotor. This is to ensure that there 
+          are no anomalies such as excessive runout or stuck pistons, which can lead to elevated temperatures and premature 
+          failure.
         </p>
 
-
       <div id="sub-section-2-header-2">
-        <h3>2.2. Rear Outboard</h3>
+        <h3>2.2. Bedding</h3>
         <p>
-          R25e’s rear outboard design could not be downsized further, even though the load requirements are far below 
-          the load capacities of the components. This is due to a combination of design and component choices, and as a 
-          result there is unfulfilled potential for weight savings.
+          Brakes bedding was first performed to prepare the friction interface between the brake pads and brake rotors. 
+          This is achieved by applying consistent moderate braking pressure at high speed, and releasing the brakes before the 
+          car comes to a full stop. Friction material will be evenly transferred from the pads to the rotors and a change in 
+          colour of the brake rotor can be observed. Discolouration outside of the friction surface can also be observed, as the 
+          rotors turned to straw colour, indicating that the temperature of the rotors did reach approximately 220 C.
+        </p>
+        <p>Over the course of 1 auto cross run (2 laps of maximum attack by the drivers), a maximum temperature of XXX C was 
+          observed; over the course of 1 endurance run (21km stint), a maximum temperature of XXX C was observed. The maximum 
+          difference between the left and right brake rotors was XXX C, indicating that the floating rotor system is working as 
+          intended.
         </p>
 
 
       <div id="sub-section-2-header-3">
-        <h3>2.3. Brakes</h3>
+        <h3>2.3. Shutoff valve and rege</h3>
         <p>
-          R25e’s regen capabilities are not maximized, as the braking system had no means of actuating only 
-          the front brakes. The loading of the brake pedal was also suboptimal due to the use of extreme brake bias 
-          settings.
+          R26e marks the first time in NUS FSAE where regenerative braking is being used to perform all of the braking on the 
+          rear axle. Previous implementations on R25e and R24e use a blend of hydraulic and regenerative braking. This is a simple 
+          and reliable approach, but the amount of energy recuperated through regen will be limited as the hydraulics can never 
+          be fully decoupled. With the shutoff valve installed, it is possible to cut off all fluid flow to the rear brakes and 
+          lean more heavily on regen. The logic to derive how much regen is needed is covered in [Appendix 2].
+        </p>
+        <p>After some tuning, we can see that the energy recovered during regular braking events are greater on R26e compared to 
+          R25e. Over the course of 1 endurance stint, the amount of energy recovered is kWh. 
+        </p>
+        <p>Another feature of the new regen system is electronic brake bias. Previously, the driver had to interact with a 
+          physical cable in order to adjust brake balance. This method is prone to failure as the adjuster cable had a tendency 
+          to become jammed and prevent the balance bar from threading smoothly. With the implementation of the shutoff valve, 
+          it is possible to control brake bias via a knob on the dashboard, making the adjustment more consistent, more reliable 
+          as well as more tactile.
         </p>
         
       </div>
