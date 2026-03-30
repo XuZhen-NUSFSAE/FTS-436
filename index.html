@@ -279,6 +279,13 @@
         <p>Going back to the wheel hub bearings, we can now calculate the correct thickness of the spacer stack. Over the course 
           of the simulation, the clamping force and deformation of the spacer stack is as follows
         </p>
+        <p>At 130Nm of torque, the spacer stack will compress by -1.2008e-002 mm or 12.008 microns. The workflow of manufacturing 
+          the outboard components will then be to machine the upright first as it is much more complicated in geometry compared to 
+          the spacer stack. Through techniques like coordinate measuring machines (CMM) or even micrometre screw gauge, the 
+          thickness of the step in the upright can be obtained. Knowing that the spacer stack needs to create a specific offset 
+          according to the type of preload selected, it is then possible to machine the spacer stack to have an initial thickness 
+          that gives the correct offset after being compressed 12 microns, achieving the ideal preload on the bearings.
+        </p>
       </div>
 
 
@@ -287,29 +294,57 @@
     <sl-divider></sl-divider>
     <div>
       <div id="section-header-4">
-        <h2>4. Concept Selection</h2>
+        <h2>4. Outboard component stiffness testing</h2>
       </div>
-
-      <div id="sub-section-4-header-1">
-        <h3>4.1. Morphological Chart</h3>
-        <image-component tag="image" source="assets/morphchartwconcepts.png" style="margin-left: 100px; margin-right: 100px"
-          subtitle="Image 4: Morphological chart"></image-component>
-        <p>Various design and component choices were experimented with, each with their unique traits [appendix 3]. 3 
-          Concepts were generated. Concept 1 serves as the benchmark and is representative of R25e. Concept 2 is the 
-          set of designs that were chosen for R26e. Concept 3 is a collection of experimental designs that ultimately 
-          failed to satisfy the selection criterion. 
-        </p>
-
-      <div id="sub-section-4-header-2">
-        <h3>4.2. Scoring</h3>
-        <image-component tag="image" source="assets/scoring.png" style="margin-left: 100px; margin-right: 100px"
-          subtitle="Image 5: Scoring of concepts"></image-component>
-        <p>The main requirements listed in my overall design goal are weight and geometry, but other factors are also 
-          considered. Concepts are scored according to whether they managed to fulfill the desired requirements. Concept 2 was 
-          chosen over the alternatives, as it only sacrifices some ease of assembly while achieving the goals 
-          of light weight and geometry, which will be explained in the following section on detail design. As to what
-          the criteria entail, the next segment will elaborate further.
-        </p>
+      <p>With all the suspension outboard components and arms mounted onto the monocoque, it is a good opportunity to test the 
+        toe and camber stiffness of the front and rear suspension.
+      </p>
+      <p>Toe and camber stiffness are important to ensure that the suspension system maintains consistent geometry. Forces 
+        during cornering and braking will propagate from the tyres to the monocoque, and such forces were replicated in the 
+        stiffness test.
+      </p>
+      <p>The setup below was created to test the real-life toe and camber stiffness of the suspension system. A stiffness jig was 
+        used to apply a load to suspension outboard, while the monocoque was weighed down and secured to the welding table via 
+        ratchet straps. Dial gauges were employed to track the displacement of the components under load as well as the monocoque 
+        itself. A weighing scale and a scissor jack were used to apply and record the load on the stiffness jig.
+      </p>
+      <p>
+        The loads are applied in 5N increments, up to a maximum of 30N. There are several important measurements to be made:
+      </p>
+          <p style="margin-left: 50px; margin-right: 50px;">  
+          1. The displacement of the jig itself. The 2 ends of the jig were probed with respect to the welding table, which 
+          directly represent the toe / camber stiffness.
+          </p>
+          <p style="margin-left: 50px; margin-right: 50px">
+          2. The displacement of the upright assembly. The upper ball joint and the toe ball joint were probed respectively, 
+          with respect to the welding table. This is to account for the compliance of the jig itself.
+          </p>
+          <p style="margin-left: 50px; margin-right: 50px">
+          3. The displacement of the solid link ball joint on the damper clevis. This point was probed with respect to the 
+          monocoque, and its purpose is to account for the compliance in the damper clevis.
+          </p>
+          <p style="margin-left: 50px; margin-right: 50px">
+          4. Various other points on the monocoque were probed. This is to ensure that the read outs from measurement 1 are not 
+          the result of the entire monocoque shifting. Additional care has been taken to securely fasten the monocoque to the 
+          welding table, but a small displacement of up to 0.02mm was still observed between the monocoque and welding table. 
+          There were runs where the value exceeded 0.1mm, and those measurements were discarded as the monocoque has shifted 
+          excessively.
+          </p>
+      <p>
+        A FEA simulation was also conducted to check the results of the real-life experiment, and the results are compared using 
+        the graphs below:
+      </p>
+      <p>
+        It is immediately obvious that the deformation in simulation is much smaller than that of the real-life testing. This is 
+        due to the compliance of various components that are otherwise modelled as solid in the FEA. Such components include 
+        PTFE lining of the rod ends, wheel hub bearings with free play and even the monocoque itself. 
+      </p>
+      <p>Perhaps more crucial than the degree of deformation is the linearity of it. Previous stiffness test managed to produce 
+        linear results when loading / unloading, but the gradient of the stiffness curve will defer drastically. This was 
+        attributed to hysteresis within the system, and the main reason for deploying additional dial gauges in the R26e test. 
+        With the additional ratchet straps in place and the position of the monocoque closely monitored, much more consistent 
+        stiffness graphs were obtained.
+      </p>
 
         
     <br />
