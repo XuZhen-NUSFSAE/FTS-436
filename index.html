@@ -257,8 +257,12 @@
         <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/sectionhub.jpg"
           subtitle="Image 9: Cross-sectional view of the front hubs on R26e">
         </image-component>
+        <br />
+        <image-component style="margin-left: 120px; margin-right: 120px" tag="image" source="assets/uprightstep.jpg"
+          subtitle="Image 10: Cross-sectional view of the front upright on R26e">
+        </image-component>
         <p>When the assembly is torqued, the spacer stack will compress and further reduce the axial clearance between the 
-          bearings. The accumulative effects of the difference in spacer height as well as compression of the inner spacer stack 
+          bearings. The combined effects of the difference in spacer height as well as compression of the inner spacer stack 
           will become the position preload of the hub bearings.
         </p>
         <p>NSK specifies a range of axial clearances for their 79C series of bearings. To be within acceptable range for the 
@@ -284,11 +288,15 @@
           axial load. In our case, that works out to 2400N. However, with a M36 preload nut, the required torque is less than 
           20Nm. Assume K = 0.2 (typical non-lubricated fastener), F = 2400N, d = 0.036m, we get:
         </p>
+        <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/m36calc.png"
+          subtitle=" ">
+        </image-component>
         <p>The situation is similar at the rear. With 3 M6 preload bolts, the required torque per bolt is only 1.28N. For 
           reference, proof load for a grade 8.8 M6 bolt is 8-10Nm, while the M36 nut exceeds 1000Nm. If the calculated torque values
           were to be followed, the fasteners would be under-utilized.
         </p>
-        <p>Fasteners require sufficient torque to withstand load/unloading cycles and prevent loss of tension. Therefore, the 
+        <p>With no prior documentation to refer to, we will have to determine the ideal fastener torque via our own methods. 
+          Fasteners require sufficient torque to withstand load/unloading cycles and prevent loss of tension. Therefore, the 
           fasteners should be torqued as hard as possible, given the physical constraints of fastener and component strength. 
           The M6 bolts used are torqued to 12Nm as we utilize grade 12.9 fasteners, which are proof-loaded to 16Nm.
         </p>
@@ -296,6 +304,9 @@
           this case is also indeterminant as it can be affected by the design of the preload nut. As such, FEA was employed to 
           investigate the range of acceptable torque values.
         </p>
+        <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/threadsim.png"
+          subtitle="Image 12: FEA was employed to simulate the torquing of non-standard fasteners">
+        </image-component>
         <p>A simplified hub assembly was created, with only the wheel bearing side being simulated to reduce computational strain. 
           The objective of this simulation is to investigate the relationship between torque applied, Factor of Safety of the 
           threaded components as well as the resultant clamping force produced. Setup of the simulation is further explained in 
@@ -304,6 +315,13 @@
         <p>
           It was found that over the range of 0 – 140 Nm, the FOS of the components behaved as such:
         </p>
+        <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/hubfos.png"
+          subtitle=" ">
+        </image-component>
+        <br />
+        <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/nutfos.png"
+          subtitle=" ">
+        </image-component>
         <p>A torque value of 130 Nm was chosen for the preload nut. This is such that the FOS of the preload nut will be 2. 
           The FOS of the hub thread displays oscillatory behaviour, and it is suspected that stress singularities moving over 
           the mesh of the hub is causing such phenomenon. The preload nut does not face this issue as the mesh of the hub is 
@@ -316,8 +334,15 @@
           ensure that methodologies are in place to ensure appropriate bearing selection.
         </p>
         <p>Going back to the wheel hub bearings, we can now calculate the correct thickness of the spacer stack. Over the course 
-          of the simulation, the clamping force and deformation of the spacer stack is as follows
+          of the simulation, the clamping force and deformation of the spacer stack is as follows:
         </p>
+        <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/clamp.png"
+          subtitle=" ">
+        </image-component>
+        <br />
+        <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/defo.png"
+          subtitle=" ">
+        </image-component>
         <p>At 130Nm of torque, the spacer stack will compress by -1.2008e-002 mm or 12.008 microns. The workflow of manufacturing 
           the outboard components will then be to machine the upright first as it is much more complicated in geometry compared to 
           the spacer stack. Through techniques like coordinate measuring machines (CMM) or even micrometre screw gauge, the 
