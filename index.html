@@ -104,8 +104,8 @@
           designed and sent out to machine shops. At the time of writing, R26e has been assembled and basic functionality test 
           are performed. 
         </p>
-        <p>Shakedown of R26e was scheduled to take place in the second week of February, 2026. Due to some unforeseen delays 
-          during the CNY period, shakedown of R26e was postponed to March 28th, 2026. The team 
+        <p>Shakedown of R26e was scheduled to take place in the second week of February, 2026. Due to unforeseen delays 
+          during the CNY period, the actual shakedown was postponed to March 28th, 2026. The team 
           will continue to stress test and fine-tune the car until the competition in June 2026.
         </p>
         <p>This report will pick up from the interim report and document the installation and validation of the various 
@@ -132,23 +132,24 @@
         </image-component>
         <p>
           The addition of dry ice cooling containers presented a unique challenge for routing the brake lines. The usual path to the 
-          rear of the chassis has been blocked off, and the rule that prevents routing under the chain still applies. The shutoff 
+          rear of the chassis has been blocked off. The shutoff 
           solenoid also had to be mounted in a location that is both well protected and easy to access for brakes bleeding, with the 
-          pressure sensor mounted further downstream instead of at the pedal box. 
+          pressure sensor mounted further downstream instead of at the pedal box. This was to monitor the actual pressure going 
+          to the callipers.
         </p>
         <p>Hence, the brake lines were carefully laid out in CAD over multiple iterations to ensure no clashing with other 
           components. A detailed brake line fabrication workflow will be illustrated in [Appendix 1] for reference.
         </p>
         <p>For the brake rotors, brakes buttons and shims were used to secure them onto the hubs. The floating rotor system allows 
           for outward thermal expansion when the rotor heats up. It also allows for small amounts of left-to-right movement of 
-          the rotors to account for the rigidly mounted callipers. However, there is no radial play of the rotors relative to 
+          the rotors to account for the rigidly mounted callipers. Crucially, there is no radial play of the rotors relative to 
           the hubs, as it can cause excessive vibrations and lead to the eventual failure of the components. 
         </p>
         <p>In this use case, brake buttons should be treated as a wear item and inspected routinely for any irregularity. Should 
           there be excessive play between the rotor and the hub, it could be a sign that the brake buttons have been eroded and 
           therefore not fully supporting the rotor. The brake buttons should then be replaced as soon as possible. The previous 
           season’s race car, R25e, covered a total of 400km before a noticeable rattle occurred within the brake system. It was 
-          found during inspection that the brake buttons were so worn out that the free play allowed them to contact the brake 
+          found during inspection that the wear of the brake buttons created free play, allowing them to contact the brake 
           callipers. Fortunately, the incident did not cause catastrophic failure, but it drives home the importance of routine 
           inspections and maintenance.
         </p>
@@ -173,7 +174,8 @@
           Brakes bedding was first performed to prepare the friction interface between the brake pads and brake rotors. 
           This is achieved by applying consistent moderate braking pressure at high speed, and releasing the brakes before the 
           car comes to a full stop. Friction material will be evenly transferred from the pads to the rotors and a change in 
-          colour of the brake rotor can be observed. Discolouration outside of the friction surface can also be observed, as the 
+          colour of the brake rotor can be observed. Temperature sensors were unfortunately inopersble during bedding, though
+          discolouration outside of the friction surface can also be observed as the 
           rotors turned to straw colour, indicating that the temperature of the rotors did reach approximately 220 C.
         </p>
         <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/frontbedded.jpg"
@@ -183,9 +185,8 @@
         <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/tempscale.jpg"
           subtitle="Image 5: Colour scale of steel after heating to various temperatures">
         </image-component>
-        <p>Once the brakes were bedded in, their temperatures were monitored. Over the course of 1 auto cross run 
-          (2 laps of maximum attack by the drivers), a maximum temperature of XXX C was 
-          observed; over the course of 1 endurance run (21km stint), a maximum temperature of XXX C was observed. The maximum 
+        <p>Once the brakes were bedded in, their temperatures were monitored. Over the course of 1 endurance run (22km stint), a 
+          maximum temperature of XXX C was observed on the front rotors. The maximum 
           difference between the left and right brake rotors was XXX C, indicating that the floating rotor system is working as 
           intended.
         </p>
@@ -200,14 +201,16 @@
           be fully decoupled. With the shutoff valve installed, it is possible to cut off all fluid flow to the rear brakes and 
           lean more heavily on regen. The logic to derive how much regen is needed is covered in [Appendix 2].
         </p>
-        <p>After some tuning, we can see that the energy recovered during regular braking events are greater on R26e compared to 
-          R25e. Over the course of 1 endurance stint, the amount of energy recovered is kWh. 
-        </p>
+         
         <p>Another feature of the new regen system is electronic brake bias. Previously, the driver had to interact with a 
           physical cable in order to adjust brake balance. This method is prone to failure as the adjuster cable had a tendency 
           to become jammed and prevent the balance bar from threading smoothly. With the implementation of the shutoff valve, 
           it is possible to control brake bias via a knob on the dashboard, making the adjustment more consistent, more reliable 
           as well as more tactile.
+        </p>
+
+        <p>
+          These features are being validated, as the core functions of the powertrain is still undergoing testing.
         </p>
         
       </div>
@@ -250,7 +253,7 @@
           </p>
         </p>
         <p>The design of R26e’s upright falls under position preload, as it utilizes a step in the upright to act as the outer race 
-          “spacer”, and a stack-up consisting of 2 aluminium rings and 4130 wheel speed sensor plate as the inner race spacer. With 
+          “spacer”, and a stack-up consisting of 2 aluminium spacers and a 4130 wheel speed sensor plate as the inner race spacer. With 
           sufficient care during machining, it is possible to create a controlled offset between the height of the step in the upright 
           and the stack of rings. 
         </p>
@@ -267,7 +270,8 @@
         </p>
         <p>NSK specifies a range of axial clearances for their 79C series of bearings. To be within acceptable range for the 
           operation of the bearings, both bearings should have minimally no positive clearance (7908 allows for 1 micron) and 
-          both should not exceed -22 and -25 microns of displacement respectively.
+          both should not exceed -22 and -25 microns of displacement respectively. The specific class of preload is less 
+          important, as the running accuracy of the assembly would be sufficient in all cases.
         </p>
         <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/preloadchart.jpg"
           subtitle="Image 10: Preload values as recommended by NSK, ROLLING BEARINGS for INDUSTRIAL MACHINERY">
@@ -307,7 +311,7 @@
         <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/threadsim.png"
           subtitle="Image 12: FEA was employed to simulate the torquing of non-standard fasteners">
         </image-component>
-        <p>A simplified hub assembly was created, with only the wheel bearing side being simulated to reduce computational strain. 
+        <p>A simplified hub assembly was created to reduce computational strain. 
           The objective of this simulation is to investigate the relationship between torque applied, Factor of Safety of the 
           threaded components as well as the resultant clamping force produced. Setup of the simulation is further explained in 
           [Appendix 3].
@@ -331,10 +335,10 @@
           subtitle="Image ?: As the preload nut is torqued, the position of the stress singularity moves around the threads of the hub">
         </image-component>
         <p>Prior to this study, suspension designer of NUS FSAE had the hubs shortened by 0.1mm to ensure the displacement of the 
-          inner races, but this practice may have created excessive preload in hindsight (>100 microns). No wheel hub bearings 
+          inner races, but this practice could create excessive preload (>100 microns). No wheel hub bearings 
           failures have been reported in NUS FSAE history, which is likely due to the bearings being significantly over-specced 
           for the use case. However, as hub designs become more compact and smaller bearings are employed, it is important to 
-          ensure that methodologies are in place to ensure appropriate bearing selection.
+          ensure that methodologies are in place for appropriate bearing selection.
         </p>
         <p>Going back to the wheel hub bearings, we can now calculate the correct thickness of the spacer stack. Over the course 
           of the simulation, the clamping force and deformation of the spacer stack is as follows:
