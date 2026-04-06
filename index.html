@@ -194,6 +194,13 @@
           Alternatively, proper openning and closing the bleeder valves can also shock the bubbles free if done fast enough, as brake 
           fluid will start and stop flowing suddenly.
         </p>
+        <p>
+          When rotating the hub by hand, it is common to feel some resistance as there will be residual pressure in the master 
+          cylinder preveneting the pistons in the calliper from retracting. However, there should not be any intermitent resistance 
+          as that indicates misaligned rotor. The position of the rotor between the callipers should also be checked. R26e 
+          experienced uneven piston extension on the front callipers, and the pistons only equalized after re-bleeding the brakes and 
+          going through brakes bedding.
+        </p>
 
       <div id="sub-section-2-header-2">
         <h3>2.2. Bedding</h3>
@@ -213,7 +220,7 @@
           subtitle="Image 4: Front rotors show a straw colour after bedding.">
         </image-component>
         <br />
-        <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/tempscale.jpg"
+        <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/steelscale.png"
           subtitle="Image 5: Colour scale of steel after heating to various temperatures.">
         </image-component>
         <p>
@@ -243,7 +250,8 @@
         </image-component>
         <p>
           These features are being validated, as the core functions of the powertrain is still undergoing testing. For now, the 
-          physical balance bar is tuned to driver preference and secured in place with jam nut.
+          physical balance bar is tuned to driver preference and secured in place with jam nut. The effectiveness of the setup 
+          will be studied as time goes on.
         </p>
         
       </div>
@@ -265,7 +273,7 @@
           subtitle="Image 6: Bearing fit as recommended by NSK">
         </image-component>
         <p>
-          Another special consideration when using angular contact bearings is the preload. Angular contact bearings are almost 
+          A special consideration when using angular contact bearings is the preload. Angular contact bearings are almost 
           exclusively used in tandem, and R26e uses a back-to-back configuration. 
         </p>
         <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/bearingconfig.jpg"
@@ -376,7 +384,8 @@
           subtitle="Image 12: As the preload nut is torqued, the position of the stress singularity moves around the threads of the hub">
         </image-component>
         <p>Prior to this study, suspension designer of NUS FSAE had the hubs shortened by 0.1mm to ensure the displacement of the 
-          inner races, but this practice could create excessive preload (>100 microns). No wheel hub bearings 
+          inner races, but this does not address the actual torque value to be applied. Various torque settings have been used, from 
+          20Nm to 140Nm. Fortunately, no wheel hub bearings 
           failures have been reported in NUS FSAE history, which is likely due to the bearings being significantly over-specced 
           for the use case. However, as hub designs become more compact and smaller bearings are employed, it is important to 
           ensure that methodologies are in place for appropriate bearing selection.
@@ -391,6 +400,11 @@
         <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/defo.png"
           subtitle=" ">
         </image-component>
+        <p>
+          The torque value of 130Nm results in a clamping force of just over 14000N, which was fed into another simualtion where 
+          the compressive force is directly applied to the spacer stack to verify the displacement of the bearing inner races. 
+          This ended up matching the deformation from the thread simulation.
+        </p>
         <p>At 130Nm of torque, the spacer stack will compress by -1.2008e-002 mm or 12.008 microns. The workflow of manufacturing 
           the outboard components will then be to machine the upright first as it is much more complicated in geometry compared to 
           the spacer stack. Through techniques like coordinate measuring machines (CMM) or even micrometre screw gauge, the 
