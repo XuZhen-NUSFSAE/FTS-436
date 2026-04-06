@@ -165,7 +165,7 @@
 
         <br />
 
-        <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/callipercrash.jpg"
+        <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/callipercrash.png"
           subtitle="Image 3: The effect of loose brake buttons.">
         </image-component>
         <p>Once the brakes were installed, hydraulics were bled and friction surfaces were degreased and bedded in to ensure 
@@ -208,9 +208,14 @@
           Brakes bedding was first performed to prepare the friction interface between the brake pads and brake rotors. 
           This is achieved by applying consistent moderate braking pressure at high speed, and releasing the brakes before the 
           car comes to a full stop. Friction material will be evenly transferred from the pads to the rotors and the area where 
-          the pad contacts the rotor will turn into a dull grey colour. Temperature sensors were unfortunately inopersble during 
+          the pad contacts the rotor will turn into a dull grey colour. The reason to avoid holding the brake while stationary is 
+          that if the brake pad has been heated up, it will continue to transfer friction material to the rotor where there is 
+          contact. This will cause uneven build up on the rotor and cause inconsistent braking perofrmance.
+        </p>
+        <p>
+          Temperature sensors were unfortunately inoperable during 
           bedding, though discolouration on the outside edges of the rotors can also be observed as they turned to straw colour, 
-          indicating that the temperature of the rotors did reach approximately 220 C.
+          indicating that the temperature of the rotors did reach approximately 220 C. 
         </p>
         <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/frontnotbed.jpg"
           subtitle="Image 4: Front rotors prior to bedding.">
@@ -229,6 +234,11 @@
           brake cleaner to remove any contaminants. The thickness of the brake pads should also be monitored. When the friction 
           material becomes too thin, the pads should be replaced and the brakes need to be re-bedded.
         </p>
+        <p>
+          Periodically rebleeding the brakes is also advisable, as brake fluid naturally absorbs moisture. This can cause corrosion 
+          within the hydraulic system, and the water content may boil under heat and turn into steam, creating a spongy pedal and 
+          seriosuly compromising brake performance.
+        </p>
 
       <div id="sub-section-2-header-3">
         <h3>2.3. Shutoff valve and regen</h3>
@@ -245,11 +255,16 @@
           it is possible to control brake bias via a knob on the dashboard, making the adjustment more consistent, more reliable 
           as well as more tactile.
         </p>
+        <p>
+          The shutoff valve is meant to be rule compliant, as the valve will only be activated when the high voltage system is 
+          active. During the technical inspection brake test, the driver has to first engage the emergency stop button on the 
+          dashboard, which will prevent the valve from engaging and allow the friction brakes to function on all 4 wheels.
+        </p>
         <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/knobs.jpg"
           subtitle="Image 5: A 16-position rotary switch will be used to control bias.">
         </image-component>
         <p>
-          These features are being validated, as the core functions of the powertrain is still undergoing testing. For now, the 
+          These features are being validated, as the core functions of the powertrain are still undergoing testing. For now, the 
           physical balance bar is tuned to driver preference and secured in place with jam nut. The effectiveness of the setup 
           will be studied as time goes on.
         </p>
@@ -281,7 +296,8 @@
         </image-component>
         <p>Preload refers to the assembly adjustment to the clearance of the bearing (typically negative clearance to keep the 
           bearings stressed). Preload is important for maintaining rigidity during operation and ensuring that the 
-          rolling elements in the bearing do not slide. 
+          rolling elements in the bearing do not slide. Failing to maintain proper preload will cause the rotating assembly 
+          to have poor running accuracy and experience premature wear.
         </p>
         <p>To achieve preload, there are 2 common techniques:
           <p style="margin-left: 50px; margin-right: 50px;">  
@@ -508,7 +524,8 @@
       <p>
         It is immediately obvious that the deformation in simulation is much smaller than that of the real-life testing. This is 
         due to the compliance of various components that are otherwise modelled as solid in the FEA. Such components include 
-        PTFE lining of the rod ends, wheel hub bearings with free play and even the monocoque itself. 
+        PTFE lining of the rod ends, wheel hub bearings with free play and even the monocoque itself. The additional dial gauges 
+        served as a good sanity check, as small deflections could be observed along the load path.
       </p>
       <p>
         Perhaps more crucial than the degree of deformation is the linearity of it. Some deviation could be observed, but 
@@ -531,10 +548,13 @@
       <p>
         This information can aid in identifying the ideal alignment for the suspension. Knowing the correlation between load and 
         geometry change allows us to preemptively adjust the toe and camber, such that deviation from the ideal alignment can be 
-        minimized.
+        minimized. It is not possible to create a setup that performs well under all situations, hence an approximation of the 
+        most common operating condition is made to be 1.5G of lateral acceleration, 0.8G of longitudinal acceleration and 1.5G 
+        of braking.
       </p>
       <p>
-        To optimize for the actual operation of the car, the car was set to have -1 degree of camber all around and 0 degrees of toe. 
+        To optimize for these conditions, the car was set to have -1 degree of camber all around and 0 degrees of toe. This is taking 
+        into account the natural camber and toe changes in pitch and roll.
         This setup will serve as the basis for further tunning on the skid pad and autocross, where laptime, tyre temperatue and 
         driver feedback can be used to further fine tune the alignment. 
       </p>
