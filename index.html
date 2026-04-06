@@ -772,6 +772,37 @@
         large displacements of the bodies and varying load conditions. The only drawback is the long runtime of the simulation, as 
         smaller substeps are used to ensure convergence. The final simulation took just over 3 days to complete.
       </p>
+      <p>
+        Step 1: Create the geometry in Solidworks. A M36 thread was first created on the hub. Using the cavity funcrion, a corresponding 
+        internal thread was the created on the nut, with a small offset to ensure that the 2 parts can slide. Small sharp edges 
+        were trimmed away to prevent meshing issues.
+      </p>
+      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/thread1.png"
+          subtitle="Image 17: Creation of geometry in CAD.">
+      </image-component>
+      <p>
+        Step 2: The geometry was loaded into Ansys static structural, and the simulation was split into 14 steps with each step 
+        applying 10Nm of additional torque. Ensure that mesh defeaturing is off as we do not want to cause the thread surfaces 
+        to become distorted. This is also the reason for trimming away small and sharp edges in CAD. Additionally, ensure that 
+        large deflection is on.
+      </p>
+      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/thread2.png"
+          subtitle="Image 17: Time step setting in Ansys.">
+      </image-component>
+      <br />
+      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/thread3.png"
+          subtitle="Image 17: Load setting in Ansys.">
+      </image-component>
+      <p>
+        Once the model converges, it can be seen that at 130Nm, the clamping force is 14489N, and that the compression of the 
+        spacer stack is 12.008 microns.
+      </p>
+      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/thread4.png"
+          subtitle="Image 17: Clamping force results.">
+      </image-component>
+      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/thread5.png"
+          subtitle="Image 17: Deformation results.">
+      </image-component>
 
     <div>
       <div id="section-header-8" class="references">
