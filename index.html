@@ -196,7 +196,7 @@
         </p>
         <p>
           When rotating the hub by hand, it is common to feel some resistance as there will be residual pressure in the master 
-          cylinder preveneting the pistons in the calliper from retracting. However, there should not be any intermitent resistance 
+          cylinder preventing the pistons in the calliper from retracting. However, there should not be any intermittent resistance 
           as that indicates misaligned rotor. The position of the rotor between the callipers should also be checked. R26e 
           experienced uneven piston extension on the front callipers, and the pistons only equalized after re-bleeding the brakes and 
           going through brakes bedding.
@@ -210,7 +210,7 @@
           car comes to a full stop. Friction material will be evenly transferred from the pads to the rotors and the area where 
           the pad contacts the rotor will turn into a dull grey colour. The reason to avoid holding the brake while stationary is 
           that if the brake pad has been heated up, it will continue to transfer friction material to the rotor where there is 
-          contact. This will cause uneven build up on the rotor and cause inconsistent braking perofrmance.
+          contact. This will cause uneven build up on the rotor and cause inconsistent braking performance.
         </p>
         <p>
           Temperature sensors were unfortunately inoperable during 
@@ -430,7 +430,7 @@
         </p>
         <p>
           As for the rear wheel hub, each of the M6 bolt will contribute approximately 10000N of clamping force, which according 
-          to simulation will result in a compression of XXXmicrons. A similar process can be followed to then determine the correct 
+          to simulation will result in a compression of 5 microns. A similar process can be followed to then determine the correct 
           spacer height at the rear.
         </p>
         <p>
@@ -553,7 +553,7 @@
         rod ends on the solid links used to setup the stiffness test, which unfortunately could not be replaced.
       </p>
       <p>
-        In the end the car was set to have -1 degree of camber all around and 0 degrees of toe. This is taking 
+        In the end, the car was set to have -1 degree of camber all around and 0 degrees of toe. This is taking 
         into account the natural camber and toe changes in pitch and roll.
         This setup will serve as the basis for further tunning on the skid pad and autocross, where laptime, tyre temperatue and 
         driver feedback can be used to further fine tune the alignment. 
@@ -577,7 +577,9 @@
       <p>
         The stiffness test setup also has room for improvement, as the dial gauges at extreme ends of the monocoque still recorded 
         some deflection despite the extra attention given to securing the entire setup. It might be worth looking into more rigid 
-        mounting setups and directly fastening the monocoque to the welding table to prevent movement.
+        mounting setups and directly fastening the monocoque to the welding table to prevent movement. The worn out rod ends on the 
+        solid links also resulted in excessive camber compliance, which made it difficult to predict the behaviour of the 
+        outboard components.
       </p>
       <p>
         Further fine tuning is also required to extract the maximum amount of performance from the car. Extensive testing will be 
@@ -623,6 +625,9 @@
       </image-component>
       
     <br />
+    <p>
+      (Word Count:
+    </p>
     <br />
     <sl-divider></sl-divider>
     <div>
@@ -803,6 +808,10 @@
       <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/thread5.png"
           subtitle="Image 39: Deformation results.">
       </image-component>
+      <p>
+        With how computationally expensive the model is, it is recommended that the simulation be run prior to the start of design 
+        phase and confirm the specifications of the components early on. 
+      </p>
 
     <div>
       <div id="section-header-8" class="references">
