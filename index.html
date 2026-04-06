@@ -213,7 +213,7 @@
           subtitle="Image 4: Front rotors show a straw colour after bedding.">
         </image-component>
         <br />
-        <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/steelscale.jpg"
+        <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/tempscale.jpg"
           subtitle="Image 5: Colour scale of steel after heating to various temperatures.">
         </image-component>
         <p>
@@ -226,7 +226,7 @@
       <div id="sub-section-2-header-3">
         <h3>2.3. Shutoff valve and regen</h3>
         <p>
-          R26e marks the first time in NUS FSAE where regenerative braking is being used to perform all of the braking on the 
+          R26e marks the first time in NUS FSAE where regenerative braking is planned to perform all of the braking on the 
           rear axle. Previous implementations on R25e and R24e use a blend of hydraulic and regenerative braking. This is a simple 
           and reliable approach, but the amount of energy recuperated through regen will be limited as the hydraulics can never 
           be fully decoupled. With the shutoff valve installed, it is possible to cut off all fluid flow to the rear brakes and 
@@ -242,7 +242,8 @@
           subtitle="Image 5: A 16-position rotary switch will be used to control bias.">
         </image-component>
         <p>
-          These features are being validated, as the core functions of the powertrain is still undergoing testing.
+          These features are being validated, as the core functions of the powertrain is still undergoing testing. For now, the 
+          physical balance bar is tuned to driver preference and secured in place with jam nut.
         </p>
         
       </div>
@@ -256,7 +257,7 @@
       <div id="section-header-3">
         <h2>3. Hub bearings and preload</h2>
         <p>
-          Wheel bearings were installed with grease on press fit interfaces as recommended by our bearings sponsor, NSK. This is 
+          Wheel bearings were installed with grease on fit interfaces as recommended by our bearings sponsor, NSK. This is 
           to prevent corrosion and subsequent damage to the uprights and hubs. The fits between the wheel bearings, uprights and 
           hubs are transitional fit (k5 and H6). 
         </p>
@@ -271,7 +272,7 @@
           subtitle="Image 7: Potenial configurations of angular contact bearings by NSK">
         </image-component>
         <p>Preload refers to the assembly adjustment to the clearance of the bearing (typically negative clearance to keep the 
-          bearings stressed) [Reference 2]. Preload is important for maintaining rigidity during operation and ensuring that the 
+          bearings stressed). Preload is important for maintaining rigidity during operation and ensuring that the 
           rolling elements in the bearing do not slide. 
         </p>
         <p>To achieve preload, there are 2 common techniques:
@@ -334,10 +335,12 @@
           subtitle=" ">
         </image-component>
         <p>The situation is similar at the rear. With 3 M6 preload bolts, the required torque per bolt is only 1.28N. For 
-          reference, proof load for a grade 8.8 M6 bolt is 8-10Nm, while the M36 nut exceeds 1000Nm. If the calculated torque values
-          were to be followed, the fasteners would be under-utilized.
+          reference, proof load for a grade 8.8 M6 bolt is 8-10Nm, while off-the-shelf M36 nut are proof-loaded to beyond 1000Nm. 
+          If the calculated torque values
+          were to be followed, the fasteners would be under-utilized.With no prior documentation to refer to, we will have to 
+          determine the ideal fastener torque via our own methods.
         </p>
-        <p>With no prior documentation to refer to, we will have to determine the ideal fastener torque via our own methods. 
+        <p> 
           Fasteners require sufficient torque to withstand load/unloading cycles and prevent loss of tension. Therefore, the 
           fasteners should be torqued as hard as possible, given the physical constraints of fastener and component strength. 
           The M6 bolts used are torqued to 12Nm as we utilize grade 12.9 fasteners, which are proof-loaded to 16Nm.
@@ -397,7 +400,8 @@
         </p>
         <p>
           As for the rear wheel hub, each of the M6 bolt will contribute approximately 10000N of clamping force, which according 
-          to simulation will result in a compression of 
+          to simulation will result in a compression of XXXmicrons. A similar process can be followed to then determine the correct 
+          spacer height at the rear.
         </p>
         <p>
           A final consideration for preloading the front and rear wheel hubs is to ensure that the preloading mechanism does not 
@@ -535,8 +539,16 @@
         verified that the valve is able to hold pressure, but its effects on the amount of energy recuperated remains to be seen.
       </p>
       <p>
+        The stiffness test setup also has room for improvement, as the dial gauges at extreme ends of the monocoque still recorded 
+        some deflecion despite the extra attention given to securing the entire setup. It might be worth looking into more rigid 
+        mounting setups and directly fastening the monocoque to the welding table to prevent movement.
+      </p>
+      <p>
         Further fine tuning is also required to extract the maximum amount of performance from the car. Extensive testing will be 
-        required to determine the ideal settings for brake bias, tyre pressure, ARB rates, dampers, etc.  
+        required to determine the ideal settings for brake bias, tyre pressure, ARB rates, dampers, etc. As testing went on, it 
+        became clear that there is a lack of camber adjustment at the front and an excess of camber adjustment at the rear. This is 
+        because of sub-optimal geometry during design phase, and thickness of the camber shim at neutral alignment should be 
+        considered more seriously in the future.
       </p>
       <image-component tag="image" source="assets/timeline26.png"
           subtitle="Image 17: Updated project timeline, given the delays.">
