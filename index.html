@@ -278,6 +278,11 @@
           both should not exceed -22 and -25 microns of displacement respectively. The specific class of preload is less 
           important, as the running accuracy of the assembly would be sufficient in all cases.
         </p>
+        <p>
+          The required offset distance should be twice that of chosen tolerance, as the axial displacement will 
+          be shared amoungst the 2 bearings. This means that if each bearing needs to be preloaded by 10 microns, the combined effects
+          of hub and upright height difference and spacer stack compression should result in an axial displacement of 20 microns.
+        </p>
         <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/preloadchart.jpg"
           subtitle="Image 10: Preload values as recommended by NSK, ROLLING BEARINGS for INDUSTRIAL MACHINERY">
         </image-component>
@@ -361,6 +366,21 @@
           thickness of the step in the upright can be obtained. Knowing that the spacer stack needs to create a specific offset 
           according to the type of preload selected, it is then possible to machine the spacer stack to have an initial thickness 
           that gives the correct offset after being compressed 12 microns, achieving the ideal preload on the bearings.
+        </p>
+        <p>
+          As for the rear wheel hub, each of the M6 bolt will contribute approximately 10000N of clamping force, which according 
+          to simulation will result in a compression of 
+        </p>
+        <p>
+          A final consideration for preloading the front and rear wheel hubs is to ensure that the preloading mechanism does not 
+          become obstructed. In the case of the front hub, if the preload nut runs out of thead and bottoms out on the stub that 
+          holds the inner races of the bearings, it will not be able to efefctively compress the spacer stack; for the rear hub, if 
+          the hub is too long, the preload plate will bottom out in a similar fashion.
+        </p>
+        <p>
+          The best way to prevent such issues from arising is to specify the appropriate length of the hubs during machining, such 
+          that the preload mechanism will not buttom out until the spacer is fully compressed. The length does not have to be exactly
+          matching the compression of the spacer, but it needs to be at least equal or larger.
         </p>
       </div>
 
@@ -465,7 +485,11 @@
         geometry change allows us to preemptively adjust the toe and camber, such that deviation from the ideal alignment can be 
         minimized.
       </p>
-        
+      <p>
+        To optimize for the actual operation of the car, the car was set to have -1 degree of camber all around and 0 degrees of toe. 
+        This setup will serve as the basis for further tunning on the skid pad and autocross, where laptime, tyre temperatue and 
+        driver feedback can be used to further fine tune the alignment. 
+      </p>
     <br />
     <br />
     <sl-divider></sl-divider>
