@@ -104,13 +104,19 @@
           designed and sent out to machine shops. At the time of writing, R26e has been assembled and basic functionality test 
           are performed. 
         </p>
-        <p>Shakedown of R26e was scheduled to take place in the second week of February, 2026. Due to unforeseen delays 
+        <p>
+          Shakedown of R26e was scheduled to take place in the second week of February, 2026. Due to unforeseen delays 
           during the CNY period, the actual shakedown was postponed to March 28th, 2026. The team 
           will continue to stress test and fine-tune the car until the competition in June 2026.
         </p>
-        <p>This report will pick up from the interim report and document the installation and validation of the various 
+        <p>
+          This report will pick up from the interim report and document the installation and validation of the various 
           components. The scope covers the installation of brake hydraulics, hub bearings and preloads, suspension toe and 
           camber stiffness, as well as documentation of manufacturing techniques.
+        </p>
+        <p>
+         Due to time constraints, it was not possible to validate the functionality of some components. The priority is to ensure 
+         reliability of the core vehicle systems, then move onto other systems that are not mission-critical.
         </p>
     </div>
     <br />
@@ -381,8 +387,14 @@
       <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/stiffnesssetup.jpg"
           subtitle="Image 13: Stiffness testing on the welding table. In this case, the camber stiffness of the rear right suspension is being tested.">
         </image-component>
+      <br />
+      <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/dialg.jpg"
+          subtitle="Image 13: Dial gauges measured the deflection of the jig.">
+        </image-component>
       <p>
-        The loads are applied in 5N increments, up to a maximum of 30N. There are several important measurements to be made:
+        The loads were applied in 5N increments, up to a maximum of 30N. Upon reaching 30N, the load was then gradually stepped down 
+        in 5N increments to observe the linearity and repeatability of deflection. There are several important measurements to be 
+        made:
       </p>
           <p style="margin-left: 50px; margin-right: 50px;">  
           1. The displacement of the jig itself. The 2 ends of the jig were probed with respect to the welding table, which 
@@ -404,8 +416,14 @@
           excessively.
           </p>
       <p>
-        The results are as follows:
+        A simulation was also setup to compare against the results from the real life testing. The simulation setup is similar 
+        to the quarter car FEA covered in the interim report, with the addition of the stiffness testing jig. Time steps were set up 
+        to mimic the loading during the real life testing. The results are as follows:
       </p>
+      <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/stiffnessFEA.png"
+          subtitle="Image 13: Ansys FEA of stiffness test.">
+        </image-component>
+      <br />
       <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/Ftoe.png"
           subtitle="Image 14: Front toe stiffness.">
       </image-component>
@@ -422,22 +440,19 @@
           subtitle="Image 17: Rear camber stiffness.">
       </image-component>
       <p>
-        These results were compared with simulation, where the same setup was recreated. The simulation results are as follows:
-      </p>
-      <p>
         It is immediately obvious that the deformation in simulation is much smaller than that of the real-life testing. This is 
         due to the compliance of various components that are otherwise modelled as solid in the FEA. Such components include 
         PTFE lining of the rod ends, wheel hub bearings with free play and even the monocoque itself. 
       </p>
       <p>
-        Perhaps more crucial than the degree of deformation is the linearity of it. Previous stiffness test managed to produce 
-        linear results when loading / unloading, but the gradient of the stiffness curve will defer drastically. This was 
-        attributed to hysteresis within the system, and the main reason for deploying additional dial gauges in the R26e test. 
-        With the additional ratchet straps in place and the position of the monocoque closely monitored, much more consistent 
-        stiffness graphs were obtained.
+        Perhaps more crucial than the degree of deformation is the linearity of it. Some deviation could be observed, but 
+        this can be attributed to hysteresis within the system. Care has been taken to ensure the stability of the experiment, with 
+        additional dial gauges and ratchet straps deployed and the position of the monocoque closely monitored. A more secure 
+        fixture can definitely be devised, but it will come at the cost of complexity and ease of installation.
       </p>
       <p>
-        The load of 30N on the jig represents the following operating conditions:
+        The load of 30N on the jig created 83.553Nm of moment onto the outboard assemblies. This corresponds to the following 
+        operating conditions:
       </p>
       <p style="margin-left: 50px; margin-right: 50px">
         Front suspension: XXG of cornering for camber stiffness and XXG of braking for toe stiffness
@@ -447,7 +462,7 @@
       </p>
       <p>
         This information can aid in identifying the ideal alignment for the suspension. Knowing the correlation between load and 
-        geometry change allows us to pre-emptively adjust the toe and camber, such that deviation from the ideal alignment can be 
+        geometry change allows us to preemptively adjust the toe and camber, such that deviation from the ideal alignment can be 
         minimized.
       </p>
         
