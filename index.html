@@ -118,6 +118,10 @@
          Due to time constraints, it was not possible to validate the functionality of some components. The priority is to ensure 
          reliability of the core vehicle systems, then move onto other systems that are not mission-critical.
         </p>
+        <p>
+          The following content will also serve as documentation for the suspension juniors to gain a head start in next the next 
+          season, where they will explore designs of their own.
+        </p>
     </div>
     <br />
     <sl-divider></sl-divider>
@@ -130,7 +134,9 @@
         <h3>2.1. Plumbing and installation</h3>
         <p>
           Brake lines were manufactured and installed onto the car. R26e utilizes 3AN stainless steel braided lines for its 
-          brake system. A combination of direct thread and banjo hose ends were used depending on the location and accessibility 
+          brake system. Stainless steel braided lines are both extremely durable and rigig, which helps to ensure maximum effectiveness 
+          of the braking system. Softer rubber lines are easier to route, but they can expand under pressure and lead to a soft 
+          pedal. A combination of direct thread and banjo hose ends were used depending on the location and accessibility 
           of the connection. The BOM is as follows:
         </p>
         <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/BOMbrake.png"
@@ -205,7 +211,8 @@
       <div id="sub-section-2-header-2">
         <h3>2.2. Bedding</h3>
         <p>
-          Brakes bedding was first performed to prepare the friction interface between the brake pads and brake rotors. 
+          Once the braking system was operational, brakes bedding was performed to prepare the friction interface between the 
+          brake pads and brake rotors. 
           This is achieved by applying consistent moderate braking pressure at high speed, and releasing the brakes before the 
           car comes to a full stop. Friction material will be evenly transferred from the pads to the rotors and the area where 
           the pad contacts the rotor will turn into a dull grey colour. The reason to avoid holding the brake while stationary is 
@@ -215,7 +222,8 @@
         <p>
           Temperature sensors were unfortunately inoperable during 
           bedding, though discolouration on the outside edges of the rotors can also be observed as they turned to straw colour, 
-          indicating that the temperature of the rotors did reach approximately 220 C. 
+          indicating that the temperature of the rotors did reach approximately 220 C. There is no need to reach peak temperature 
+          during bedding, but there still needs to be sufficient heat for the process to take place.
         </p>
         <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/frontnotbed.jpg"
           subtitle="Image 4: Front rotors prior to bedding.">
@@ -282,7 +290,7 @@
         <p>
           Wheel bearings were installed with grease on fit interfaces as recommended by our bearings sponsor, NSK. This is 
           to prevent corrosion and subsequent damage to the uprights and hubs. The fits between the wheel bearings, uprights and 
-          hubs are transitional fit (k5 and H6). 
+          hubs are transitional fit (k5 and H6).
         </p>
         <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/bearingfit.jpg"
           subtitle="Image 8: Bearing fit as recommended by NSK">
@@ -351,8 +359,9 @@
         <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/torqueeqsimp.png"
           subtitle=" ">
         </image-component>
-        <p>Previous recommendation from NSK points to a preload specification that is sufficient to support the maximum expected 
-          axial load. In our case, that works out to 2400N. However, with a M36 preload nut, the required torque is less than 
+        <p>Previous recommendation from NSK points to a preload specification that was sufficient to support the maximum expected 
+          axial load. In our case, that works out to 2400N. The rationale was to prevent separation between the bearing inner 
+          races and soacer stack. However, with a M36 preload nut, the required torque is less than 
           20Nm. Assume K = 0.2 (typical non-lubricated fastener), F = 2400N, d = 0.036m, we get:
         </p>
         <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/m36calc.png"
@@ -391,16 +400,16 @@
         <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/nutfos.png"
           subtitle=" ">
         </image-component>
-        <p>A torque value of 130 Nm was chosen for the preload nut. This is such that the FOS of the preload nut will be 2. 
-          The FOS of the hub thread displays oscillatory behaviour, and it is suspected that stress singularities moving over 
-          the mesh of the hub is causing such phenomenon. The preload nut does not face this issue as the mesh of the hub is 
+        <p>A torque value of 130 Nm was chosen for the preload nut. This was such that the FOS of the preload nut would be 2. 
+          The FOS of the hub thread displayed oscillatory behaviour, and it was suspected that stress singularities moving over 
+          the mesh of the hub was causing such phenomenon. The preload nut did not face this issue as the mesh of the hub was 
           relatively continuous. 
         </p>
         <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/singu.gif"
           subtitle="Image 14: As the preload nut is torqued, the position of the stress singularity moves around the threads of the hub">
         </image-component>
-        <p>Prior to this study, suspension designer of NUS FSAE had the hubs shortened by 0.1mm to ensure the displacement of the 
-          inner races, but this does not address the actual torque value to be applied. Various torque settings have been used, from 
+        <p>Prior to this study, suspension designers of NUS FSAE designed the hubs to be shortened by 0.1mm to ensure the displacement of the 
+          inner races, but this did not address the actual torque value to be applied. Various torque settings have been used, from 
           20Nm to 140Nm. Fortunately, no wheel hub bearings 
           failures have been reported in NUS FSAE history, which is likely due to the bearings being significantly over-specced 
           for the use case. However, as hub designs become more compact and smaller bearings are employed, it is important to 
