@@ -178,12 +178,16 @@
           discolouration outside of the friction surface can also be observed as the 
           rotors turned to straw colour, indicating that the temperature of the rotors did reach approximately 220 C.
         </p>
-        <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/frontbedded.jpg"
-          subtitle="Image 4: Front rotors show a dark straw colour after bedding">
+        <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/frontnotbed.jpg"
+          subtitle="Image 4: Front rotors prior to bedding.">
+        </image-component>
+        <br />
+        <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/frontbedded.jpg"
+          subtitle="Image 4: Front rotors show a straw colour after bedding.">
         </image-component>
         <br />
         <image-component style="margin-left: 50px; margin-right: 50px" tag="image" source="assets/steelscale.jpg"
-          subtitle="Image 5: Colour scale of steel after heating to various temperatures">
+          subtitle="Image 5: Colour scale of steel after heating to various temperatures.">
         </image-component>
 
       <div id="sub-section-2-header-3">
@@ -195,14 +199,15 @@
           be fully decoupled. With the shutoff valve installed, it is possible to cut off all fluid flow to the rear brakes and 
           lean more heavily on regen. The logic to derive how much regen is needed is covered in [Appendix 2].
         </p>
-         
         <p>Another feature of the new regen system is electronic brake bias. Previously, the driver had to interact with a 
           physical cable in order to adjust brake balance. This method is prone to failure as the adjuster cable had a tendency 
           to become jammed and prevent the balance bar from threading smoothly. With the implementation of the shutoff valve, 
           it is possible to control brake bias via a knob on the dashboard, making the adjustment more consistent, more reliable 
           as well as more tactile.
         </p>
-
+        <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/knobs.jpg"
+          subtitle="Image 5: A 16-position rotary switch will be used to control bias.">
+        </image-component>
         <p>
           These features are being validated, as the core functions of the powertrain is still undergoing testing.
         </p>
@@ -373,7 +378,7 @@
         ratchet straps. Dial gauges were employed to track the displacement of the components under load as well as the monocoque 
         itself. A weighing scale and a scissor jack were used to apply and record the load on the stiffness jig.
       </p>
-      <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/stiffnesssetup.jpg"
+      <image-component style="margin-left: 200px; margin-right: 200px" tag="image" source="assets/stiffnesssetup.jpg"
           subtitle="Image 13: Stiffness testing on the welding table. In this case, the camber stiffness of the rear right suspension is being tested.">
         </image-component>
       <p>
@@ -399,24 +404,26 @@
           excessively.
           </p>
       <p>
-        A FEA simulation was also conducted to check the results of the real-life experiment, and the results are compared using 
-        the graphs below:
+        The results are as follows:
       </p>
-      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/stiffness1.jpg"
+      <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/Ftoe.png"
           subtitle="Image 14: Front toe stiffness.">
       </image-component>
       <br />
-      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/stiffness2.jpg"
+      <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/Fcamber.png"
           subtitle="Image 15: Front camber stiffness.">
       </image-component>
       <br />
-      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/stiffness3.jpg"
+      <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/Rtoe.png"
           subtitle="Image 16: Rear toe stiffness.">
       </image-component>
       <br />
-      <image-component style="margin-left: 100px; margin-right: 100px" tag="image" source="assets/stiffness4.jpg"
+      <image-component style="margin-left: 150px; margin-right: 150px" tag="image" source="assets/Rcamber.png"
           subtitle="Image 17: Rear camber stiffness.">
       </image-component>
+      <p>
+        These results were compared with simulation, where the same setup was recreated. The simulation results are as follows:
+      </p>
       <p>
         It is immediately obvious that the deformation in simulation is much smaller than that of the real-life testing. This is 
         due to the compliance of various components that are otherwise modelled as solid in the FEA. Such components include 
@@ -464,7 +471,9 @@
         Further fine tuning is also required to extract the maximum amount of performance from the car. Extensive testing will be 
         required to determine the ideal settings for brake bias, tyre pressure, ARB rates, dampers, etc.  
       </p>
-
+      <image-component tag="image" source="assets/timeline26.png"
+          subtitle="Image 17: Updated project timeline, given the delays.">
+      </image-component>
     <br />
     <br />
     <sl-divider></sl-divider>
